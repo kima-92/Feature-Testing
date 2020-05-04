@@ -18,7 +18,7 @@ struct MapView: UIViewRepresentable {
     }
     
     // Put the code that updates the UIKit View
-    func updateUIView(_ uiView: MapView.UIViewType, context: UIViewRepresentableContext<MapView>) {
+    func updateUIView(_ uiView: MKMapView, context: UIViewRepresentableContext<MapView>) {
         
         // Save the coordinates
         let coordinate = CLLocationCoordinate2D(latitude: 34.011286, longitude: -116.166868)
