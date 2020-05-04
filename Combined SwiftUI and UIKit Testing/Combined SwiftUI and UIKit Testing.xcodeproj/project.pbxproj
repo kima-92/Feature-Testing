@@ -12,6 +12,7 @@
 		FA89EDD424607B8C00A72535 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA89EDD224607B8C00A72535 /* Main.storyboard */; };
 		FA89EDD624607B8E00A72535 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA89EDD524607B8E00A72535 /* Assets.xcassets */; };
 		FA89EDD924607B8E00A72535 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA89EDD724607B8E00A72535 /* LaunchScreen.storyboard */; };
+		FA89EDE324607C6F00A72535 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89EDE224607C6F00A72535 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FA89EDD524607B8E00A72535 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA89EDD824607B8E00A72535 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA89EDDA24607B8E00A72535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA89EDE224607C6F00A72535 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +41,7 @@
 			isa = PBXGroup;
 			children = (
 				FA89EDE024607BBF00A72535 /* Storyboards */,
+				FA89EDE124607C4E00A72535 /* View Controllers */,
 				FA89EDCB24607B8C00A72535 /* Combined SwiftUI and UIKit Testing */,
 				FA89EDCA24607B8C00A72535 /* Products */,
 			);
@@ -70,6 +73,14 @@
 				FA89EDD724607B8E00A72535 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FA89EDE124607C4E00A72535 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA89EDE224607C6F00A72535 /* HomeViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +156,7 @@
 			files = (
 				FA89EDCD24607B8C00A72535 /* AppDelegate.swift in Sources */,
 				FA89EDCF24607B8C00A72535 /* SceneDelegate.swift in Sources */,
+				FA89EDE324607C6F00A72535 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
