@@ -13,10 +13,13 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .cyan
     }
     
 
+    @IBAction func nextPageButtonTapped(_ sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -19,6 +19,9 @@
                                 <rect key="frame" x="93" y="412" width="228" height="72"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
                                 <state key="normal" title="Next Page"/>
+                                <connections>
+                                    <action selector="nextPageButtonTapped:" destination="yul-2K-LlD" eventType="touchUpInside" id="C4n-LH-Sbj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
