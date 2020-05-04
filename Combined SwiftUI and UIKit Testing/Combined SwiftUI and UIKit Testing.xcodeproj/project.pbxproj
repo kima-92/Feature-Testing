@@ -13,6 +13,7 @@
 		FA89EDD624607B8E00A72535 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA89EDD524607B8E00A72535 /* Assets.xcassets */; };
 		FA89EDD924607B8E00A72535 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA89EDD724607B8E00A72535 /* LaunchScreen.storyboard */; };
 		FA89EDE324607C6F00A72535 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89EDE224607C6F00A72535 /* HomeViewController.swift */; };
+		FA89EDE524607E6F00A72535 /* SecondFromSBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89EDE424607E6F00A72535 /* SecondFromSBViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FA89EDD824607B8E00A72535 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA89EDDA24607B8E00A72535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA89EDE224607C6F00A72535 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FA89EDE424607E6F00A72535 /* SecondFromSBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondFromSBViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				FA89EDE224607C6F00A72535 /* HomeViewController.swift */,
+				FA89EDE424607E6F00A72535 /* SecondFromSBViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			files = (
 				FA89EDCD24607B8C00A72535 /* AppDelegate.swift in Sources */,
 				FA89EDCF24607B8C00A72535 /* SceneDelegate.swift in Sources */,
+				FA89EDE524607E6F00A72535 /* SecondFromSBViewController.swift in Sources */,
 				FA89EDE324607C6F00A72535 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
