@@ -21,6 +21,7 @@
                                 <state key="normal" title="Next Page"/>
                                 <connections>
                                     <action selector="nextPageButtonTapped:" destination="yul-2K-LlD" eventType="touchUpInside" id="C4n-LH-Sbj"/>
+                                    <segue destination="Hv1-eC-Mom" kind="show" identifier="ShowSecondFromSBSegue" id="cST-I2-79D"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -94,6 +95,7 @@ the Storyboard</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xAa-BK-PaK"/>
                     </view>
+                    <navigationItem key="navigationItem" id="7bR-wY-NEB"/>
                     <connections>
                         <outlet property="titleLabel" destination="zEy-nq-Qik" id="3QO-kN-WfQ"/>
                     </connections>

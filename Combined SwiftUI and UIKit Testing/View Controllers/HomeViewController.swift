@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "" {
+        if segue.identifier == "ShowSecondFromSBSegue" {
             
             guard let secondPageFromSBVC = segue.destination as? SecondFromSBViewController else { return }
             
