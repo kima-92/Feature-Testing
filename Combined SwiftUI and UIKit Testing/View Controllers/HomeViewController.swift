@@ -9,6 +9,8 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    var note = Note(title: "First Note", image: UIImage(contentsOfFile: "tree")!)
 
     override func viewDidLoad() {
         super.viewDidLoad()

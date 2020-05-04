@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
 struct Note {
-    var title: String?
+    var title: String
+    var image: UIImage
 }

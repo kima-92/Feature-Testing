@@ -14,6 +14,8 @@
 		FA89EDD924607B8E00A72535 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA89EDD724607B8E00A72535 /* LaunchScreen.storyboard */; };
 		FA89EDE324607C6F00A72535 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89EDE224607C6F00A72535 /* HomeViewController.swift */; };
 		FA89EDE524607E6F00A72535 /* SecondFromSBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89EDE424607E6F00A72535 /* SecondFromSBViewController.swift */; };
+		FA89EDE824607FD400A72535 /* SecondPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89EDE724607FD400A72535 /* SecondPageView.swift */; };
+		FA89EDEB246084BF00A72535 /* note.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89EDEA246084BF00A72535 /* note.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		FA89EDDA24607B8E00A72535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA89EDE224607C6F00A72535 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FA89EDE424607E6F00A72535 /* SecondFromSBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondFromSBViewController.swift; sourceTree = "<group>"; };
+		FA89EDE724607FD400A72535 /* SecondPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageView.swift; sourceTree = "<group>"; };
+		FA89EDEA246084BF00A72535 /* note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,8 @@
 			children = (
 				FA89EDE024607BBF00A72535 /* Storyboards */,
 				FA89EDE124607C4E00A72535 /* View Controllers */,
+				FA89EDE624607F9500A72535 /* SwiftUI Views */,
+				FA89EDE92460847400A72535 /* Models */,
 				FA89EDCB24607B8C00A72535 /* Combined SwiftUI and UIKit Testing */,
 				FA89EDCA24607B8C00A72535 /* Products */,
 			);
@@ -84,6 +90,22 @@
 				FA89EDE424607E6F00A72535 /* SecondFromSBViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FA89EDE624607F9500A72535 /* SwiftUI Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA89EDE724607FD400A72535 /* SecondPageView.swift */,
+			);
+			path = "SwiftUI Views";
+			sourceTree = "<group>";
+		};
+		FA89EDE92460847400A72535 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA89EDEA246084BF00A72535 /* note.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +179,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA89EDE824607FD400A72535 /* SecondPageView.swift in Sources */,
+				FA89EDEB246084BF00A72535 /* note.swift in Sources */,
 				FA89EDCD24607B8C00A72535 /* AppDelegate.swift in Sources */,
 				FA89EDCF24607B8C00A72535 /* SceneDelegate.swift in Sources */,
 				FA89EDE524607E6F00A72535 /* SecondFromSBViewController.swift in Sources */,
