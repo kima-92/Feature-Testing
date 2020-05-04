@@ -63,9 +63,14 @@ class HomeViewController: UIViewController {
         
         else if segue.identifier == "ShowOtherOptionSegue" {
             
-            guard let otherOptionVC = segue.destination as? OtherOptionViewController else { return }
+            if let otherOptionVC = segue.destination as? OtherOptionViewController {
+                otherOptionVC.note = self.note
+            }
             
-            otherOptionVC.note = self.note
+                // Tried to pass but this didn't work
+//            else if let otherOptionV = segue.destination as? UIHostingController(rootView: OtherOptionView(note: note)) {
+//                otherOptionV.note = self.note
+//            }
         }
     }
 }
