@@ -9,10 +9,24 @@
 import UIKit
 
 class SecondFromSBViewController: UIViewController {
-
+    
+    // MARK: - Properties
+    var note: Note?
+    
+    // MARK: - Outlets
+    @IBOutlet weak var titleLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        updateViews()
+    }
+    
+    func updateViews() {
+        
+        guard let note = note else { return }
+        
+        titleLabel.text = note.title
         view.backgroundColor = .systemPink
     }
     

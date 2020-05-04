@@ -10,7 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    var note = Note(title: "First Note", image: UIImage(contentsOfFile: "tree")!)
+    var note = Note(title: "First Note", image: UIImage(named: "tree")!)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,14 +22,20 @@ class HomeViewController: UIViewController {
     @IBAction func nextPageButtonTapped(_ sender: UIButton) {
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "" {
+            
+            guard let secondPageFromSBVC = segue.destination as? SecondFromSBViewController else { return }
+            
+            secondPageFromSBVC.note = self.note
+        }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
 
 }
