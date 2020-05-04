@@ -11,6 +11,7 @@ import SwiftUI
 
 class HomeViewController: UIViewController {
     
+    // MARK: - Properties
     var note = Note(title: "First Note", image: UIImage(named: "tree")!)
 
     override func viewDidLoad() {
@@ -19,7 +20,9 @@ class HomeViewController: UIViewController {
         view.backgroundColor = .cyan
     }
     
-
+    // MARK: - Actions
+    
+    // Next Page
     @IBAction func nextPageButtonTapped(_ sender: UIButton) {
         
         if #available(iOS 13.0, *) {
@@ -33,10 +36,22 @@ class HomeViewController: UIViewController {
         }
     }
     
+    // Other Option
+    @IBAction func otherOptionButtonTapped(_ sender: UIButton) {
+        
+        if #available(iOS 13.0, *) {
+            let otherOptionV = OtherOptionView(note: note)
+            
+            let host = UIHostingController(rootView: otherOptionV)
+            navigationController?.pushViewController(host, animated: true)
+        } else {
+            
+            performSegue(withIdentifier: "ShowOtherOptionSegue", sender: note)
+        }
+    }
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "ShowSecondFromSBSegue" {
@@ -45,8 +60,12 @@ class HomeViewController: UIViewController {
             
             secondPageFromSBVC.note = self.note
         }
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        else if segue.identifier == "ShowOtherOptionSegue" {
+            
+            guard let otherOptionVC = segue.destination as? OtherOptionViewController else { return }
+            
+            otherOptionVC.note = self.note
+        }
     }
-
 }

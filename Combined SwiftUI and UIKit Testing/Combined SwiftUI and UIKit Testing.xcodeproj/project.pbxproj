@@ -16,6 +16,8 @@
 		FA89EDE524607E6F00A72535 /* SecondFromSBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89EDE424607E6F00A72535 /* SecondFromSBViewController.swift */; };
 		FA89EDE824607FD400A72535 /* SecondPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89EDE724607FD400A72535 /* SecondPageView.swift */; };
 		FA89EDEB246084BF00A72535 /* note.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89EDEA246084BF00A72535 /* note.swift */; };
+		FA89EDED2460A2A100A72535 /* OtherOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89EDEC2460A2A100A72535 /* OtherOptionViewController.swift */; };
+		FA89EDEF2460A42B00A72535 /* OtherOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89EDEE2460A42B00A72535 /* OtherOptionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		FA89EDE424607E6F00A72535 /* SecondFromSBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondFromSBViewController.swift; sourceTree = "<group>"; };
 		FA89EDE724607FD400A72535 /* SecondPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageView.swift; sourceTree = "<group>"; };
 		FA89EDEA246084BF00A72535 /* note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = note.swift; sourceTree = "<group>"; };
+		FA89EDEC2460A2A100A72535 /* OtherOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherOptionViewController.swift; sourceTree = "<group>"; };
+		FA89EDEE2460A42B00A72535 /* OtherOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherOptionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 			children = (
 				FA89EDE224607C6F00A72535 /* HomeViewController.swift */,
 				FA89EDE424607E6F00A72535 /* SecondFromSBViewController.swift */,
+				FA89EDEC2460A2A100A72535 /* OtherOptionViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -96,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				FA89EDE724607FD400A72535 /* SecondPageView.swift */,
+				FA89EDEE2460A42B00A72535 /* OtherOptionView.swift */,
 			);
 			path = "SwiftUI Views";
 			sourceTree = "<group>";
@@ -181,9 +187,11 @@
 			files = (
 				FA89EDE824607FD400A72535 /* SecondPageView.swift in Sources */,
 				FA89EDEB246084BF00A72535 /* note.swift in Sources */,
+				FA89EDED2460A2A100A72535 /* OtherOptionViewController.swift in Sources */,
 				FA89EDCD24607B8C00A72535 /* AppDelegate.swift in Sources */,
 				FA89EDCF24607B8C00A72535 /* SceneDelegate.swift in Sources */,
 				FA89EDE524607E6F00A72535 /* SecondFromSBViewController.swift in Sources */,
+				FA89EDEF2460A42B00A72535 /* OtherOptionView.swift in Sources */,
 				FA89EDE324607C6F00A72535 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
