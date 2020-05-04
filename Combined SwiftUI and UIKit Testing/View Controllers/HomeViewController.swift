@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class HomeViewController: UIViewController {
     
@@ -20,6 +21,16 @@ class HomeViewController: UIViewController {
     
 
     @IBAction func nextPageButtonTapped(_ sender: UIButton) {
+        
+        if #available(iOS 13.0, *) {
+            let secondPageV = SecondPageView(note: note)
+            
+            let host = UIHostingController(rootView: secondPageV)
+            navigationController?.pushViewController(host, animated: true)
+        } else {
+            
+            performSegue(withIdentifier: "ShowSecondFromSBSegue", sender: note)
+        }
     }
     
     

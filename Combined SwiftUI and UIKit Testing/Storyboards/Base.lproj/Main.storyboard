@@ -21,7 +21,6 @@
                                 <state key="normal" title="Next Page"/>
                                 <connections>
                                     <action selector="nextPageButtonTapped:" destination="yul-2K-LlD" eventType="touchUpInside" id="C4n-LH-Sbj"/>
-                                    <segue destination="Hv1-eC-Mom" kind="show" identifier="ShowSecondFromSBSegue" id="cST-I2-79D"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -33,6 +32,9 @@
                         <viewLayoutGuide key="safeArea" id="8ac-gv-ZOY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="Pat-iC-Zxq"/>
+                    <connections>
+                        <segue destination="Hv1-eC-Mom" kind="show" identifier="ShowSecondFromSBSegue" id="Bwu-J1-Fjq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tj1-iJ-Zzn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
