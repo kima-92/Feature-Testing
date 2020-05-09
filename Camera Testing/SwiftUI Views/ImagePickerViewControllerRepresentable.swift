@@ -15,6 +15,9 @@ struct ImagePickerViewControllerRepresentable: UIViewControllerRepresentable {
     typealias Coordinator = ImagePickerCoordinator
     
     @Binding var image: UIImage?
+    @Binding var isShown: Bool
+    
+    
     var sourceType: UIImagePickerController.SourceType = .camera
     
     // This is used if the Picker will change
@@ -22,7 +25,7 @@ struct ImagePickerViewControllerRepresentable: UIViewControllerRepresentable {
     }
     
     func makeCoordinator() -> ImagePickerViewControllerRepresentable.Coordinator {
-        return ImagePickerCoordinator(image: $image)
+        return ImagePickerCoordinator(image: $image, isShown: $isShown)
     }
     
     // Make sure to return the appropriate dataType

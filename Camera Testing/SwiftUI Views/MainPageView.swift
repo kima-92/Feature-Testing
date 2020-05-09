@@ -26,7 +26,7 @@ struct MainPageView: View {
             VStack {
                 
                 // Placeholder Image
-                Image("placeholderImage")
+                Image(uiImage: image ?? UIImage(named: "placeholderImage")!)
                     .resizable()
                     .frame(width: 300, height: 300)
                 
@@ -63,7 +63,7 @@ struct MainPageView: View {
             
         } // End of NavigationView
         .sheet(isPresented: $showImagePicker) {
-            Text("MODAL")
+            ImagePickerViewControllerRepresentable(image: self.$image, isShown: self.$showImagePicker, sourceType: self.sourceType)
         }
     }
 }
