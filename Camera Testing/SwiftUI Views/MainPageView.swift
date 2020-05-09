@@ -10,8 +10,11 @@ import SwiftUI
 
 struct MainPageView: View {
     
+    // MARK: - Properties
     @State private var showSheet: Bool = false
-
+    @State private var showImagePicker: Bool = false
+    
+    @State private var sourceType: UIImagePickerController.SourceType = .camera
     
     // MARK: - Body
     var body: some View {
@@ -30,8 +33,9 @@ struct MainPageView: View {
                     
                     self.showSheet = true
                     
-                }
+                } // End of button
                 .padding()
+                // ActionSheet ( Alert )
                 .actionSheet(isPresented: $showSheet) {
                     let alertTitle = Text("Select Photo")
                     let alertMessage = Text("Choose")
@@ -39,15 +43,25 @@ struct MainPageView: View {
                     return ActionSheet(title: alertTitle, message: alertMessage, buttons: [
                         .default(Text("Photo Library")) {
                             
+                            self.showImagePicker = true
+                            self.sourceType = .photoLibrary
+                            
                         },
                         .default(Text("Camera")) {
+                            
+                            self.showImagePicker = true
+                            self.sourceType = .camera
                             
                         },
                         .cancel()
                     ])
                 }
-            }
+            } // End of VStack
             .navigationBarTitle("Camera Demo")
+            
+        } // End of NavigationView
+        .sheet(isPresented: $showImagePicker) {
+            Text("MODAL")
         }
     }
 }
