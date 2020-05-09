@@ -16,6 +16,8 @@ struct MainPageView: View {
     
     @State private var sourceType: UIImagePickerController.SourceType = .camera
     
+    @State private var image: UIImage?
+    
     // MARK: - Body
     var body: some View {
         
