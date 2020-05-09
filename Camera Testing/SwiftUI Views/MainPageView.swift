@@ -9,15 +9,45 @@
 import SwiftUI
 
 struct MainPageView: View {
+    
+    @State private var showSheet: Bool = false
+
+    
+    // MARK: - Body
     var body: some View {
         
         NavigationView {
             
             VStack {
                 
-                Text("Hello World")
+                // Placeholder Image
+                Image("placeholderImage")
+                    .resizable()
+                    .frame(width: 300, height: 300)
+                
+                // Choose Picture button
+                Button("Choose Picture") {
+                    
+                    self.showSheet = true
+                    
+                }
+                .padding()
+                .actionSheet(isPresented: $showSheet) {
+                    let alertTitle = Text("Select Photo")
+                    let alertMessage = Text("Choose")
+                    
+                    return ActionSheet(title: alertTitle, message: alertMessage, buttons: [
+                        .default(Text("Photo Library")) {
+                            
+                        },
+                        .default(Text("Camera")) {
+                            
+                        },
+                        .cancel()
+                    ])
+                }
             }
-        .navigationBarTitle("Camera Demo")
+            .navigationBarTitle("Camera Demo")
         }
     }
 }
