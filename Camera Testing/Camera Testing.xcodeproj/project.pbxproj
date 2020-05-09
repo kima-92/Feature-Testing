@@ -12,6 +12,7 @@
 		FA89ED8B245F1D7300A72535 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA89ED89245F1D7300A72535 /* Main.storyboard */; };
 		FA89ED8D245F1D7600A72535 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA89ED8C245F1D7600A72535 /* Assets.xcassets */; };
 		FA89ED90245F1D7600A72535 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA89ED8E245F1D7600A72535 /* LaunchScreen.storyboard */; };
+		FA89EDF1246635B700A72535 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89EDF0246635B700A72535 /* MainPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FA89ED8C245F1D7600A72535 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA89ED8F245F1D7600A72535 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA89ED91245F1D7600A72535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA89EDF0246635B700A72535 /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 			children = (
 				FA89ED97245F856900A72535 /* Storyboards */,
 				FA89ED9B245F85B200A72535 /* View Controllers */,
+				FA89EDF2246635C400A72535 /* SwiftUI Views */,
 				FA89ED9A245F85A600A72535 /* Views */,
 				FA89ED99245F85A100A72535 /* Models */,
 				FA89ED98245F859600A72535 /* Helpers */,
@@ -102,6 +105,14 @@
 			children = (
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FA89EDF2246635C400A72535 /* SwiftUI Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA89EDF0246635B700A72535 /* MainPageView.swift */,
+			);
+			path = "SwiftUI Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 			files = (
 				FA89ED84245F1D7300A72535 /* AppDelegate.swift in Sources */,
 				FA89ED86245F1D7300A72535 /* SceneDelegate.swift in Sources */,
+				FA89EDF1246635B700A72535 /* MainPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
