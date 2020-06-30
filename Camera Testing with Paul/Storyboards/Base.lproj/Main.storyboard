@@ -28,6 +28,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" backgroundImage="largecircle.fill.circle" catalog="system"/>
+                                <state key="selected" backgroundImage="stop.circle" catalog="system"/>
                                 <connections>
                                     <action selector="recordButtonTapped:" destination="A8u-Dl-i0e" eventType="touchUpInside" id="Hqf-nh-w4p"/>
                                 </connections>
@@ -75,5 +76,6 @@
     </scenes>
     <resources>
         <image name="largecircle.fill.circle" catalog="system" width="128" height="121"/>
+        <image name="stop.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>

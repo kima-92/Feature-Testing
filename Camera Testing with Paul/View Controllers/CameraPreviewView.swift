@@ -11,8 +11,8 @@ import AVFoundation
 
 class CameraPreviewView: UIView {
     
-    // This will override the normal layer presented for a View
-    // To now display whatever the camera is currently viewing
+    // Override the default (background) CA layer presented for a typical View
+    // To now display the data streming from the camera using AVCaptureVideoPreviewLayer
     override class var layerClass: AnyClass {
         return AVCaptureVideoPreviewLayer.self
     }

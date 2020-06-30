@@ -14,13 +14,14 @@ class CameraViewController: UIViewController {
     // MARK: - Properties
     
     lazy private var captureSession = AVCaptureSession()
+    lazy private var fileOutput = AVCaptureMovieFileOutput()
     
     // MARK: - Outlets
     
     @IBOutlet weak var cameraView: CameraPreviewView!
     @IBOutlet weak var recordButton: UIButton!
     
-    // MARK: - DidLoad, DidAppear and DidDisappear
+    // MARK: - DidLoad and DidAppear
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +44,18 @@ class CameraViewController: UIViewController {
         // Stop streaming when this VC desappears
         captureSession.stopRunning()
     }
+    // MARK: - Actions
+    
+    @IBAction func recordButtonTapped(_ sender: UIButton) {
+        
+        if fileOutput.isRecording {
+            fileOutput.stopRecording()
+        } else {
+            fileOutput.startRecording(to: newRecordingURL(), recordingDelegate: self)
+        }
+    }
+    
+    // MARK: - Methods
     
     private func setUpCaptureSession() {
         
@@ -74,7 +87,14 @@ class CameraViewController: UIViewController {
         
         // 4.   Add Output
         
-        // 5.   Recording
+        // 5.   Recording to disk
+        
+        guard captureSession.canAddOutput(fileOutput) else {
+            fatalError("Cannot record to disk")
+        }
+        
+        captureSession.addOutput(fileOutput)
+        
         captureSession.commitConfiguration()
         
         // 6.   Live Preview
@@ -98,13 +118,6 @@ class CameraViewController: UIViewController {
         fatalError("No cameras found on this device")
     }
     
-    // MARK: - Actions
-    
-    @IBAction func recordButtonTapped(_ sender: UIButton) {
-    }
-    
-    // MARK: - Methods
-    
     // Creates a new file URL in the documents directory
     private func newRecordingURL() -> URL {
         
@@ -122,5 +135,37 @@ class CameraViewController: UIViewController {
         let fileURL = documentsDirectory.appendingPathComponent(name).appendingPathExtension("mov")
         
         return fileURL
+    }
+    
+    private func updateViews() {
+        
+        // If is recording is True, the recordButton's state will be True
+        recordButton.isSelected = fileOutput.isRecording
+    }
+}
+
+// MARK: - Extensions
+
+// Conforming to RecordingDelegate
+extension CameraViewController: AVCaptureFileOutputRecordingDelegate {
+    
+    // Does functionality when it's Done Recording
+    func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
+        
+        print("didFinishRecording")
+        
+        if let error = error {
+            print("Video Recording Error: \(error)")
+        }
+        
+        updateViews()
+    }
+    
+    // Functionality for when it Starts Recording
+    func fileOutput(_ output: AVCaptureFileOutput, didStartRecordingTo fileURL: URL, from connections: [AVCaptureConnection]) {
+        print("didStartRecording: \(fileURL)")
+        
+        // Update UI
+        updateViews()
     }
 }
