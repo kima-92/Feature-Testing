@@ -12,6 +12,7 @@
 		FA7165FC24AB86C400EFF9F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7165FA24AB86C400EFF9F5 /* Main.storyboard */; };
 		FA7165FE24AB86C600EFF9F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7165FD24AB86C600EFF9F5 /* Assets.xcassets */; };
 		FA71660124AB86C600EFF9F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7165FF24AB86C600EFF9F5 /* LaunchScreen.storyboard */; };
+		FA71660B24AB8B5300EFF9F5 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71660A24AB8B5300EFF9F5 /* CameraPreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FA7165FD24AB86C600EFF9F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA71660024AB86C600EFF9F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA71660224AB86C600EFF9F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA71660A24AB8B5300EFF9F5 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		FA7165E824AB86C300EFF9F5 = {
 			isa = PBXGroup;
 			children = (
+				FA71660924AB8B2700EFF9F5 /* View Controllers */,
 				FA71660824AB873400EFF9F5 /* Storyboards */,
 				FA7165F324AB86C300EFF9F5 /* Camera Testing with Paul */,
 				FA7165F224AB86C300EFF9F5 /* Products */,
@@ -70,6 +73,14 @@
 				FA7165FF24AB86C600EFF9F5 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FA71660924AB8B2700EFF9F5 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA71660A24AB8B5300EFF9F5 /* CameraPreviewView.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +156,7 @@
 			files = (
 				FA7165F524AB86C400EFF9F5 /* AppDelegate.swift in Sources */,
 				FA7165F724AB86C400EFF9F5 /* SceneDelegate.swift in Sources */,
+				FA71660B24AB8B5300EFF9F5 /* CameraPreviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

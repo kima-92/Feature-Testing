@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A8u-Dl-i0e">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -14,13 +14,55 @@
                     <view key="view" contentMode="scaleToFill" id="48D-5T-1Ia">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sy5-Vn-Vgr" customClass="CameraPreviewView" customModule="Camera_Testing_with_Paul" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LF0-Vn-PI3">
+                                <rect key="frame" x="162" y="742.5" width="90" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="04W-a5-1lR"/>
+                                    <constraint firstAttribute="width" secondItem="LF0-Vn-PI3" secondAttribute="height" multiplier="1:1" id="6mQ-Ik-7Lp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" backgroundImage="largecircle.fill.circle" catalog="system"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Sy5-Vn-Vgr" firstAttribute="leading" secondItem="bET-kC-tF4" secondAttribute="leading" id="08z-GJ-ISV"/>
+                            <constraint firstAttribute="bottom" secondItem="Sy5-Vn-Vgr" secondAttribute="bottom" id="M9z-xn-cMm"/>
+                            <constraint firstItem="Sy5-Vn-Vgr" firstAttribute="top" secondItem="48D-5T-1Ia" secondAttribute="top" id="VbF-sO-byA"/>
+                            <constraint firstItem="bET-kC-tF4" firstAttribute="bottom" secondItem="LF0-Vn-PI3" secondAttribute="bottom" constant="30" id="bYG-cT-8FW"/>
+                            <constraint firstItem="Sy5-Vn-Vgr" firstAttribute="trailing" secondItem="bET-kC-tF4" secondAttribute="trailing" id="q4J-6m-Df9"/>
+                            <constraint firstItem="LF0-Vn-PI3" firstAttribute="centerX" secondItem="48D-5T-1Ia" secondAttribute="centerX" id="yI2-t3-S0d"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bET-kC-tF4"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lic-Qe-bHr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="149" y="119"/>
+            <point key="canvasLocation" x="147.82608695652175" y="118.52678571428571"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="09h-nf-Ka2">
+            <objects>
+                <viewController id="z8x-sp-5bN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R8F-sO-0pZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="5Kb-5l-Mhy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xMc-3a-Drd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="999" y="119"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="largecircle.fill.circle" catalog="system" width="128" height="121"/>
+    </resources>
 </document>
