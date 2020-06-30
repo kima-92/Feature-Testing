@@ -31,6 +31,11 @@ class CameraViewController: UIViewController {
         cameraView.videoPlayerView.videoGravity = .resizeAspectFill
         
         setUpCaptureSession()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
+        
+        // This entire VC will be listening for the tapGesture
+        view.addGestureRecognizer(tapGesture)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -46,6 +51,7 @@ class CameraViewController: UIViewController {
         // Stop streaming when this VC desappears
         captureSession.stopRunning()
     }
+    
     // MARK: - Actions
     
     @IBAction func recordButtonTapped(_ sender: UIButton) {
@@ -155,13 +161,15 @@ class CameraViewController: UIViewController {
         // Set the CGRect where you want to display the preview (playerLayer):
         
         // Top left corner (For Fullscreen, you'd need a close button)
-        var topRect = view.bounds
+        var topRect = view.bounds // this VC's bounds
         
         topRect.size.height = topRect.size.height / 4
         topRect.size.width = topRect.size.width / 4
         // ^^ Creates a constant for the magic number
         topRect.origin.y = view.layoutMargins.top
         // ^^ using the safe area of the screen
+        
+        // TODO: - Decide how big the preview should be
         
         // Set that CGRect as the frame of playerLAyer
         playerLayer.frame = topRect
@@ -173,6 +181,41 @@ class CameraViewController: UIViewController {
         player.play()
     }
     
+    // Handle TapGesture
+    @objc private func handleTapGesture(_ tapGesture: UITapGestureRecognizer) {
+        
+        switch tapGesture.state {
+        // There's more states, we only care about ended for now
+            
+        case .ended:
+            replayMovie()
+            
+        default:
+            // Ignore all other states
+            break
+        }
+    }
+    
+    // Replay Movie
+    private func replayMovie() {
+        
+        // If there's a movie recorded
+        guard let player = player else { return }
+        
+        // Re-play it
+        
+        // Movies play on frame per second:
+        // 30 FPS, 24 FPS, 24 FPS
+        // CMTime (0, 30) = 1rst frame
+        // CMTime (1, 30) = 2nd frame ...
+        
+        // Seek from what frame to start replaying from
+        player.seek(to: .zero)
+        // play it again
+        player.play()
+    }
+    
+    // Update Views
     private func updateViews() {
         
         // If is recording is True, the recordButton's state will be True
