@@ -69,8 +69,9 @@ class CameraViewController: UIViewController {
         
         captureSession.beginConfiguration()
         
-        // 1.   Add inputs
+        // 1.   Get input devices
         let camera = bestCamera()
+        let microphone = bestAudio()
         
         // 2.   Video
         
@@ -92,6 +93,16 @@ class CameraViewController: UIViewController {
         
         
         // 3.   Audio
+        
+        // If we can grab the audio from this device, and also add it to the camera session
+        guard let audioInput = try? AVCaptureDeviceInput(device: microphone),
+            captureSession.canAddInput(audioInput) else  {
+                
+                fatalError("Can't create microphone input")
+        }
+        
+        // Add it to the session
+        captureSession.addInput(audioInput)
         
         // 4.   Add Output
         
@@ -127,6 +138,16 @@ class CameraViewController: UIViewController {
             return wideCamera
         }
         fatalError("No cameras found on this device")
+    }
+    
+    // Best microphone for this device
+    private func bestAudio() -> AVCaptureDevice {
+        
+        if let device = AVCaptureDevice.default(for: .audio) {
+            
+            return device
+        }
+        fatalError("No device to record Audio")
     }
     
     // Creates a new file URL in the documents directory
