@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A8u-Dl-i0e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z8x-sp-5bN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -12,15 +12,15 @@
             <objects>
                 <viewController id="A8u-Dl-i0e" customClass="CameraViewController" customModule="Camera_Testing_with_Paul" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="48D-5T-1Ia">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sy5-Vn-Vgr" customClass="CameraPreviewView" customModule="Camera_Testing_with_Paul" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LF0-Vn-PI3">
-                                <rect key="frame" x="162" y="742.5" width="90" height="89"/>
+                                <rect key="frame" x="162" y="688.5" width="90" height="89"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="04W-a5-1lR"/>
                                     <constraint firstAttribute="width" secondItem="LF0-Vn-PI3" secondAttribute="height" multiplier="1:1" id="6mQ-Ik-7Lp"/>
@@ -44,6 +44,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bET-kC-tF4"/>
                     </view>
+                    <navigationItem key="navigationItem" id="imy-oC-7VI"/>
                     <connections>
                         <outlet property="cameraView" destination="Sy5-Vn-Vgr" id="IAg-SL-192"/>
                         <outlet property="recordButton" destination="LF0-Vn-PI3" id="tl3-9Z-afu"/>
@@ -53,20 +54,23 @@
             </objects>
             <point key="canvasLocation" x="147.82608695652175" y="118.52678571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="09h-nf-Ka2">
             <objects>
-                <viewController id="z8x-sp-5bN" sceneMemberID="viewController">
+                <viewController id="z8x-sp-5bN" customClass="FirstViewController" customModule="Camera_Testing_with_Paul" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R8F-sO-0pZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="5Kb-5l-Mhy"/>
                     </view>
+                    <connections>
+                        <segue destination="A8u-Dl-i0e" kind="show" identifier="ShowCamera" id="idP-P2-kG3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMc-3a-Drd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="999" y="119"/>
+            <point key="canvasLocation" x="-777" y="119"/>
         </scene>
     </scenes>
     <resources>
