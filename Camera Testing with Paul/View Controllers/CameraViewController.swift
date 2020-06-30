@@ -16,6 +16,8 @@ class CameraViewController: UIViewController {
     lazy private var captureSession = AVCaptureSession()
     lazy private var fileOutput = AVCaptureMovieFileOutput()
     
+    private var player: AVPlayer!
+    
     // MARK: - Outlets
     
     @IBOutlet weak var cameraView: CameraPreviewView!
@@ -106,15 +108,18 @@ class CameraViewController: UIViewController {
         
         
         if let ultraWideCamera = AVCaptureDevice.default(.builtInUltraWideCamera, for: .video, position: .back) {
+            
+            print("Used Ultra Wide Camera")
             return ultraWideCamera
         }
         
         // All iPhones have a wide angle camera (front + back)
         // If the previous fails, we can try thos one
         if let wideCamera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) {
+            
+            print("Used Wide Camera")
             return wideCamera
         }
-        
         fatalError("No cameras found on this device")
     }
     
@@ -137,6 +142,37 @@ class CameraViewController: UIViewController {
         return fileURL
     }
     
+    // Display Preview of recorded video
+    private func playMovie(url: URL) {
+        
+        // We can't use this without a video URL, it would crash without it
+        player = AVPlayer(url: url)
+        
+        // This creates a special kind of View that is good for playing an already recorded movie.
+        // Not the same as the layer that streams data directly from the camera live
+        let playerLayer = AVPlayerLayer(player: player)
+        
+        // Set the CGRect where you want to display the preview (playerLayer):
+        
+        // Top left corner (For Fullscreen, you'd need a close button)
+        var topRect = view.bounds
+        
+        topRect.size.height = topRect.size.height / 4
+        topRect.size.width = topRect.size.width / 4
+        // ^^ Creates a constant for the magic number
+        topRect.origin.y = view.layoutMargins.top
+        // ^^ using the safe area of the screen
+        
+        // Set that CGRect as the frame of playerLAyer
+        playerLayer.frame = topRect
+        
+        // Add this view to the screen
+        view.layer.addSublayer(playerLayer)
+        
+        // Play the movie
+        player.play()
+    }
+    
     private func updateViews() {
         
         // If is recording is True, the recordButton's state will be True
@@ -156,8 +192,10 @@ extension CameraViewController: AVCaptureFileOutputRecordingDelegate {
         
         if let error = error {
             print("Video Recording Error: \(error)")
+            
+        } else {
+            playMovie(url: outputFileURL)
         }
-        
         updateViews()
     }
     
