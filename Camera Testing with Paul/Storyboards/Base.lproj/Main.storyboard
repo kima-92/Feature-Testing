@@ -12,15 +12,15 @@
             <objects>
                 <viewController id="A8u-Dl-i0e" customClass="CameraViewController" customModule="Camera_Testing_with_Paul" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="48D-5T-1Ia">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sy5-Vn-Vgr" customClass="CameraPreviewView" customModule="Camera_Testing_with_Paul" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LF0-Vn-PI3">
-                                <rect key="frame" x="162" y="688.5" width="90" height="89"/>
+                                <rect key="frame" x="162" y="742.5" width="90" height="89"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="04W-a5-1lR"/>
                                     <constraint firstAttribute="width" secondItem="LF0-Vn-PI3" secondAttribute="height" multiplier="1:1" id="6mQ-Ik-7Lp"/>
@@ -65,7 +65,7 @@
                         <viewLayoutGuide key="safeArea" id="5Kb-5l-Mhy"/>
                     </view>
                     <connections>
-                        <segue destination="A8u-Dl-i0e" kind="show" identifier="ShowCamera" id="idP-P2-kG3"/>
+                        <segue destination="A8u-Dl-i0e" kind="presentation" identifier="ShowCamera" modalPresentationStyle="fullScreen" id="idP-P2-kG3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMc-3a-Drd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
