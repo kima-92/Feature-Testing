@@ -13,6 +13,14 @@ class FirstViewController: UIViewController {
     // This VC's only purpose is to get permission from the user
     // to use the camera, before actually streaming from the camera
     
+    // MARK: - Properties
+    var captureType: CaptureType = .picture
+    
+    // MARK: - Outlets
+    
+    @IBOutlet weak var takePictureButton: UIButton!
+    @IBOutlet weak var takeVideoButton: UIButton!
+    
     // MARK: - DidLoad and DidAppear
 
     override func viewDidLoad() {
@@ -21,7 +29,16 @@ class FirstViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func takePictureButtonTapped(_ sender: UIButton) {
+        captureType = .picture
+        showCameraIfGrantedPermission()
+    }
+    @IBAction func takeVideoButtonTapped(_ sender: UIButton) {
+        captureType = .video
         showCameraIfGrantedPermission()
     }
     
@@ -75,5 +92,23 @@ class FirstViewController: UIViewController {
     
     private func showCamera() {
         performSegue(withIdentifier: "ShowCamera", sender: self)
+    }
+    
+    private func updateViews() {
+        takePictureButton.layer.masksToBounds = true
+        
+        takeVideoButton.layer.cornerRadius = 15
+        takePictureButton.layer.cornerRadius = 15
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "ShowCamera" {
+            
+            guard let cameraVC = segue.destination as? CameraViewController else { return }
+            cameraVC.captureType = self.captureType
+        }
     }
 }

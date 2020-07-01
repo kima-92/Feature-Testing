@@ -15,6 +15,7 @@
 		FA71660B24AB8B5300EFF9F5 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71660A24AB8B5300EFF9F5 /* CameraPreviewView.swift */; };
 		FA71660D24AB911300EFF9F5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71660C24AB911300EFF9F5 /* CameraViewController.swift */; };
 		FA71660F24AB968C00EFF9F5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71660E24AB968C00EFF9F5 /* FirstViewController.swift */; };
+		FA71661224ACB8C800EFF9F5 /* CaptureType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71661124ACB8C800EFF9F5 /* CaptureType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FA71660A24AB8B5300EFF9F5 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
 		FA71660C24AB911300EFF9F5 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		FA71660E24AB968C00EFF9F5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		FA71661124ACB8C800EFF9F5 /* CaptureType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 			children = (
 				FA71660824AB873400EFF9F5 /* Storyboards */,
 				FA71660924AB8B2700EFF9F5 /* View Controllers */,
+				FA71661024ACB87800EFF9F5 /* Helpers */,
 				FA7165F324AB86C300EFF9F5 /* Camera Testing with Paul */,
 				FA7165F224AB86C300EFF9F5 /* Products */,
 			);
@@ -87,6 +90,14 @@
 				FA71660E24AB968C00EFF9F5 /* FirstViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FA71661024ACB87800EFF9F5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FA71661124ACB8C800EFF9F5 /* CaptureType.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +173,7 @@
 			files = (
 				FA71660F24AB968C00EFF9F5 /* FirstViewController.swift in Sources */,
 				FA7165F524AB86C400EFF9F5 /* AppDelegate.swift in Sources */,
+				FA71661224ACB8C800EFF9F5 /* CaptureType.swift in Sources */,
 				FA71660D24AB911300EFF9F5 /* CameraViewController.swift in Sources */,
 				FA7165F724AB86C400EFF9F5 /* SceneDelegate.swift in Sources */,
 				FA71660B24AB8B5300EFF9F5 /* CameraPreviewView.swift in Sources */,

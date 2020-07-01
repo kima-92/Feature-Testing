@@ -62,10 +62,47 @@
                     <view key="view" contentMode="scaleToFill" id="R8F-sO-0pZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="oTx-lr-xhR">
+                                <rect key="frame" x="90" y="368" width="234" height="160"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXu-VF-5XK">
+                                        <rect key="frame" x="0.0" y="0.0" width="234" height="60"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="Take Picture">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="takePictureButtonTapped:" destination="z8x-sp-5bN" eventType="touchUpInside" id="PZz-En-V4h"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmO-ds-eS4">
+                                        <rect key="frame" x="0.0" y="100" width="234" height="60"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="Take Video">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="takeVideoButtonTapped:" destination="z8x-sp-5bN" eventType="touchUpInside" id="JvD-PK-EK4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oTx-lr-xhR" firstAttribute="centerX" secondItem="R8F-sO-0pZ" secondAttribute="centerX" id="Bb3-sK-qU1"/>
+                            <constraint firstItem="5Kb-5l-Mhy" firstAttribute="trailing" secondItem="oTx-lr-xhR" secondAttribute="trailing" constant="90" id="Ytd-Ie-BxQ"/>
+                            <constraint firstItem="oTx-lr-xhR" firstAttribute="centerY" secondItem="R8F-sO-0pZ" secondAttribute="centerY" id="Zv6-ms-fcC"/>
+                            <constraint firstItem="oTx-lr-xhR" firstAttribute="leading" secondItem="5Kb-5l-Mhy" secondAttribute="leading" constant="90" id="rjj-bh-i4j"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5Kb-5l-Mhy"/>
                     </view>
                     <connections>
+                        <outlet property="takePictureButton" destination="FXu-VF-5XK" id="Icx-VK-E3b"/>
+                        <outlet property="takeVideoButton" destination="kmO-ds-eS4" id="FsO-eT-Y6H"/>
                         <segue destination="A8u-Dl-i0e" kind="presentation" identifier="ShowCamera" modalPresentationStyle="fullScreen" id="idP-P2-kG3"/>
                     </connections>
                 </viewController>

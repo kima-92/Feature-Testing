@@ -13,6 +13,8 @@ class CameraViewController: UIViewController {
     
     // MARK: - Properties
     
+    var captureType: CaptureType?
+    
     lazy private var captureSession = AVCaptureSession()
     lazy private var fileOutput = AVCaptureMovieFileOutput()
     
@@ -69,7 +71,7 @@ class CameraViewController: UIViewController {
         
         captureSession.beginConfiguration()
         
-        // 1.   Get input devices
+        // 1.   Get input from devices
         let camera = bestCamera()
         let microphone = bestAudio()
         
@@ -204,6 +206,7 @@ class CameraViewController: UIViewController {
     
     // Handle TapGesture
     @objc private func handleTapGesture(_ tapGesture: UITapGestureRecognizer) {
+        print("Capture type is: \(captureType)")
         
         switch tapGesture.state {
         // There's more states, we only care about ended for now
