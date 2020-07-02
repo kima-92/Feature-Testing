@@ -53,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lic-Qe-bHr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="147.82608695652175" y="118.52678571428571"/>
+            <point key="canvasLocation" x="-1441" y="847"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="09h-nf-Ka2">
@@ -70,9 +70,15 @@
                                         <rect key="frame" x="0.0" y="0.0" width="234" height="60"/>
                                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Take Picture">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="takePictureButtonTapped:" destination="z8x-sp-5bN" eventType="touchUpInside" id="PZz-En-V4h"/>
                                         </connections>
@@ -84,6 +90,11 @@
                                         <state key="normal" title="Take Video">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="takeVideoButtonTapped:" destination="z8x-sp-5bN" eventType="touchUpInside" id="JvD-PK-EK4"/>
                                         </connections>
@@ -103,12 +114,138 @@
                     <connections>
                         <outlet property="takePictureButton" destination="FXu-VF-5XK" id="Icx-VK-E3b"/>
                         <outlet property="takeVideoButton" destination="kmO-ds-eS4" id="FsO-eT-Y6H"/>
-                        <segue destination="A8u-Dl-i0e" kind="presentation" identifier="ShowCamera" modalPresentationStyle="fullScreen" id="idP-P2-kG3"/>
+                        <segue destination="A8u-Dl-i0e" kind="presentation" identifier="ShowCameraForVideo" modalPresentationStyle="fullScreen" id="idP-P2-kG3"/>
+                        <segue destination="CgR-cW-cnz" kind="presentation" identifier="ShowCameraForPicture" modalPresentationStyle="fullScreen" id="yVs-Jo-hMm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMc-3a-Drd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-777" y="119"/>
+        </scene>
+        <!--Photo Camera View Controller-->
+        <scene sceneID="NJX-ed-4xa">
+            <objects>
+                <viewController id="CgR-cW-cnz" customClass="PhotoCameraViewController" customModule="Camera_Testing_with_Paul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fof-eU-QHE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eMU-fN-gbd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PyH-Jj-DAw">
+                                        <rect key="frame" x="177" y="786" width="60" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="1Uc-Qm-Z3g"/>
+                                            <constraint firstAttribute="width" secondItem="PyH-Jj-DAw" secondAttribute="height" multiplier="1:1" id="TcE-3i-Vlm"/>
+                                            <constraint firstAttribute="height" constant="60" id="uuH-jl-ByB"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="takePictureButtonTapped:" destination="CgR-cW-cnz" eventType="touchUpInside" id="Dxi-ol-xyU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="PyH-Jj-DAw" secondAttribute="bottom" constant="50" id="NuQ-RT-xBT"/>
+                                    <constraint firstItem="PyH-Jj-DAw" firstAttribute="centerX" secondItem="eMU-fN-gbd" secondAttribute="centerX" id="y1y-dL-RdZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eMU-fN-gbd" firstAttribute="leading" secondItem="fof-eU-QHE" secondAttribute="leading" id="OCb-bh-bnB"/>
+                            <constraint firstItem="eMU-fN-gbd" firstAttribute="top" secondItem="fof-eU-QHE" secondAttribute="top" id="fgb-B5-488"/>
+                            <constraint firstAttribute="trailing" secondItem="eMU-fN-gbd" secondAttribute="trailing" id="pAV-ee-Ovz"/>
+                            <constraint firstAttribute="bottom" secondItem="eMU-fN-gbd" secondAttribute="bottom" id="vjM-te-IfF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="30m-6f-JD7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NQU-cr-p0P"/>
+                    <connections>
+                        <outlet property="takePictureButton" destination="PyH-Jj-DAw" id="Njz-pu-GQB"/>
+                        <segue destination="no1-9W-dYW" kind="presentation" identifier="ShowPhotoPreviewSegue" modalPresentationStyle="fullScreen" id="yOU-qn-BeF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tmK-GR-xoJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65.217391304347828" y="845.75892857142856"/>
+        </scene>
+        <!--Photo Preview View Controller-->
+        <scene sceneID="zNe-ak-iql">
+            <objects>
+                <viewController id="no1-9W-dYW" customClass="PhotoPreviewViewController" customModule="Camera_Testing_with_Paul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9VG-oQ-ueH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PHH-pb-76M">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rIY-bm-LW9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgK-is-YKW">
+                                        <rect key="frame" x="35" y="15" width="48" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonTapped:" destination="no1-9W-dYW" eventType="touchUpInside" id="xmM-Pn-Rjk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJt-Oq-i3p">
+                                        <rect key="frame" x="345" y="15" width="34" height="30"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveButtonTapped:" destination="no1-9W-dYW" eventType="touchUpInside" id="knF-hs-euu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="dgK-is-YKW" firstAttribute="centerY" secondItem="rIY-bm-LW9" secondAttribute="centerY" id="6o8-tv-bch"/>
+                                    <constraint firstItem="uJt-Oq-i3p" firstAttribute="top" secondItem="rIY-bm-LW9" secondAttribute="top" constant="15" id="8We-KK-MOU"/>
+                                    <constraint firstAttribute="height" constant="60" id="GKC-dV-wrz"/>
+                                    <constraint firstItem="uJt-Oq-i3p" firstAttribute="centerY" secondItem="rIY-bm-LW9" secondAttribute="centerY" id="PPs-UN-4Sl"/>
+                                    <constraint firstItem="dgK-is-YKW" firstAttribute="top" secondItem="rIY-bm-LW9" secondAttribute="top" constant="15" id="PTK-aF-SOD"/>
+                                    <constraint firstAttribute="bottom" secondItem="dgK-is-YKW" secondAttribute="bottom" constant="15" id="dXI-k0-Wv2"/>
+                                    <constraint firstItem="dgK-is-YKW" firstAttribute="leading" secondItem="rIY-bm-LW9" secondAttribute="leading" constant="35" id="jHc-wu-cLY"/>
+                                    <constraint firstAttribute="trailing" secondItem="uJt-Oq-i3p" secondAttribute="trailing" constant="35" id="jnZ-BC-uJU"/>
+                                    <constraint firstAttribute="bottom" secondItem="uJt-Oq-i3p" secondAttribute="bottom" constant="15" id="qrX-hs-gPx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rIY-bm-LW9" firstAttribute="leading" secondItem="d1g-UM-TNv" secondAttribute="leading" id="78k-5V-i4J"/>
+                            <constraint firstItem="d1g-UM-TNv" firstAttribute="trailing" secondItem="rIY-bm-LW9" secondAttribute="trailing" id="KYr-Fv-rqI"/>
+                            <constraint firstItem="PHH-pb-76M" firstAttribute="leading" secondItem="d1g-UM-TNv" secondAttribute="leading" id="LpZ-Xe-TWH"/>
+                            <constraint firstAttribute="bottom" secondItem="PHH-pb-76M" secondAttribute="bottom" id="OSn-LS-tCo"/>
+                            <constraint firstItem="rIY-bm-LW9" firstAttribute="top" secondItem="d1g-UM-TNv" secondAttribute="top" id="VhH-sO-ubl"/>
+                            <constraint firstItem="PHH-pb-76M" firstAttribute="top" secondItem="9VG-oQ-ueH" secondAttribute="top" id="hB5-fX-tzu"/>
+                            <constraint firstItem="PHH-pb-76M" firstAttribute="trailing" secondItem="d1g-UM-TNv" secondAttribute="trailing" id="woa-6c-OV0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="d1g-UM-TNv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FWB-XY-yDo"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="dgK-is-YKW" id="1Ut-dM-b3z"/>
+                        <outlet property="saveButton" destination="uJt-Oq-i3p" id="Sgx-9H-65V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jzi-vt-FcY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="897.10144927536237" y="845.75892857142856"/>
         </scene>
     </scenes>
     <resources>

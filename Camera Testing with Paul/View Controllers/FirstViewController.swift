@@ -35,7 +35,9 @@ class FirstViewController: UIViewController {
     
     @IBAction func takePictureButtonTapped(_ sender: UIButton) {
         captureType = .picture
-        showCameraIfGrantedPermission()
+        performSegue(withIdentifier: "ShowCameraForPicture", sender: self)
+        
+        //showCameraIfGrantedPermission()
     }
     @IBAction func takeVideoButtonTapped(_ sender: UIButton) {
         captureType = .video
@@ -91,21 +93,23 @@ class FirstViewController: UIViewController {
     }
     
     private func showCamera() {
-        performSegue(withIdentifier: "ShowCamera", sender: self)
+        performSegue(withIdentifier: "ShowCameraForVideo", sender: self)
     }
     
     private func updateViews() {
-        takePictureButton.layer.masksToBounds = true
+        // This is not really working, the settings from the storyboards are the once that are giving them the rounded corners
         
-        takeVideoButton.layer.cornerRadius = 15
-        takePictureButton.layer.cornerRadius = 15
+//        takePictureButton.clipsToBounds = false
+//
+//        takeVideoButton.layer.cornerRadius = 15
+//        takePictureButton.layer.cornerRadius = 15
     }
     
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "ShowCamera" {
+        if segue.identifier == "ShowCameraForVideo" {
             
             guard let cameraVC = segue.destination as? CameraViewController else { return }
             cameraVC.captureType = self.captureType

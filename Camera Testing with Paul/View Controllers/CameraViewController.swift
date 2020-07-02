@@ -16,7 +16,8 @@ class CameraViewController: UIViewController {
     var captureType: CaptureType?
     
     lazy private var captureSession = AVCaptureSession()
-    lazy private var fileOutput = AVCaptureMovieFileOutput()
+    lazy private var movieFileOutput = AVCaptureMovieFileOutput()
+    
     
     private var player: AVPlayer!
     
@@ -58,10 +59,10 @@ class CameraViewController: UIViewController {
     
     @IBAction func recordButtonTapped(_ sender: UIButton) {
         
-        if fileOutput.isRecording {
-            fileOutput.stopRecording()
+        if movieFileOutput.isRecording {
+            movieFileOutput.stopRecording()
         } else {
-            fileOutput.startRecording(to: newRecordingURL(), recordingDelegate: self)
+            movieFileOutput.startRecording(to: newRecordingURL(), recordingDelegate: self)
         }
     }
     
@@ -110,11 +111,11 @@ class CameraViewController: UIViewController {
         
         // 5.   Recording to disk
         
-        guard captureSession.canAddOutput(fileOutput) else {
+        guard captureSession.canAddOutput(movieFileOutput) else {
             fatalError("Cannot record to disk")
         }
         
-        captureSession.addOutput(fileOutput)
+        captureSession.addOutput(movieFileOutput)
         
         captureSession.commitConfiguration()
         
@@ -206,7 +207,6 @@ class CameraViewController: UIViewController {
     
     // Handle TapGesture
     @objc private func handleTapGesture(_ tapGesture: UITapGestureRecognizer) {
-        print("Capture type is: \(captureType)")
         
         switch tapGesture.state {
         // There's more states, we only care about ended for now
@@ -243,7 +243,7 @@ class CameraViewController: UIViewController {
     private func updateViews() {
         
         // If is recording is True, the recordButton's state will be True
-        recordButton.isSelected = fileOutput.isRecording
+        recordButton.isSelected = movieFileOutput.isRecording
     }
 }
 
