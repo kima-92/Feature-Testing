@@ -130,40 +130,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eMU-fN-gbd">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PyH-Jj-DAw">
-                                        <rect key="frame" x="177" y="786" width="60" height="60"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="1Uc-Qm-Z3g"/>
-                                            <constraint firstAttribute="width" secondItem="PyH-Jj-DAw" secondAttribute="height" multiplier="1:1" id="TcE-3i-Vlm"/>
-                                            <constraint firstAttribute="height" constant="60" id="uuH-jl-ByB"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="takePictureButtonTapped:" destination="CgR-cW-cnz" eventType="touchUpInside" id="Dxi-ol-xyU"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PyH-Jj-DAw">
+                                <rect key="frame" x="177" y="752" width="60" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="PyH-Jj-DAw" secondAttribute="bottom" constant="50" id="NuQ-RT-xBT"/>
-                                    <constraint firstItem="PyH-Jj-DAw" firstAttribute="centerX" secondItem="eMU-fN-gbd" secondAttribute="centerX" id="y1y-dL-RdZ"/>
+                                    <constraint firstAttribute="width" constant="60" id="1Uc-Qm-Z3g"/>
+                                    <constraint firstAttribute="width" secondItem="PyH-Jj-DAw" secondAttribute="height" multiplier="1:1" id="TcE-3i-Vlm"/>
+                                    <constraint firstAttribute="height" constant="60" id="uuH-jl-ByB"/>
                                 </constraints>
-                            </view>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="takePictureButtonTapped:" destination="CgR-cW-cnz" eventType="touchUpInside" id="Dxi-ol-xyU"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="eMU-fN-gbd" firstAttribute="leading" secondItem="fof-eU-QHE" secondAttribute="leading" id="OCb-bh-bnB"/>
-                            <constraint firstItem="eMU-fN-gbd" firstAttribute="top" secondItem="fof-eU-QHE" secondAttribute="top" id="fgb-B5-488"/>
-                            <constraint firstAttribute="trailing" secondItem="eMU-fN-gbd" secondAttribute="trailing" id="pAV-ee-Ovz"/>
-                            <constraint firstAttribute="bottom" secondItem="eMU-fN-gbd" secondAttribute="bottom" id="vjM-te-IfF"/>
+                            <constraint firstItem="30m-6f-JD7" firstAttribute="bottom" secondItem="PyH-Jj-DAw" secondAttribute="bottom" constant="50" id="PwI-wq-JA9"/>
+                            <constraint firstItem="PyH-Jj-DAw" firstAttribute="centerX" secondItem="fof-eU-QHE" secondAttribute="centerX" id="cFO-b4-drX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="30m-6f-JD7"/>
                     </view>
@@ -185,7 +173,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PHH-pb-76M">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PHH-pb-76M">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rIY-bm-LW9">
@@ -240,6 +228,7 @@
                     <navigationItem key="navigationItem" id="FWB-XY-yDo"/>
                     <connections>
                         <outlet property="cancelButton" destination="dgK-is-YKW" id="1Ut-dM-b3z"/>
+                        <outlet property="photoImageView" destination="PHH-pb-76M" id="cVv-d4-EdX"/>
                         <outlet property="saveButton" destination="uJt-Oq-i3p" id="Sgx-9H-65V"/>
                     </connections>
                 </viewController>

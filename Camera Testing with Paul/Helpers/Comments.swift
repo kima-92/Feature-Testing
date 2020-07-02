@@ -25,5 +25,13 @@ import Foundation
  Capture Session will start running when we have finished the configuration
  
  
- We'll add photo output to the caprture session later, when we want to capture a still image
+ 1. We'll add photo output to the caprture session later, when we want to capture a still image
+ 
+2.  We have now configured the AVCaptureSession Object, and are ready to present the camera\
+ 3. Time to show what it (the camera) captures, on screen
+ 
+ 
+ -  AVCapturePhotoCaptureDelegate:
+    Contains methods for monitoring progress and recieving results from a photo capture Output
+ -  Since iOS 11, we use didFinishProcessingPhoto to get the resulting photo
  */
