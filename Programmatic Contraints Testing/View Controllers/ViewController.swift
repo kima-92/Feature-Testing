@@ -12,33 +12,52 @@ class ViewController: UIViewController {
     
     // MARK: - Properties
     
-    var pawsImageView: UIImageView {
+    var pawsImageView: UIImageView = {
         let pawsImage = UIImage(named: "paws")
         let imageView = UIImageView(image: pawsImage)
         
         return imageView
-    }
+    }()
+    
+    var descriptionTextView: UITextView = {
+        let textView = UITextView()
+        textView.text = "Join us today in our fun and games!"
+        
+        return textView
+    }()
     
     // MARK: - DidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addImagePawsView()
+        updateViews()
     }
     
     // MARK: - Methods
     
-    private func addImagePawsView() {
+    private func updateViews() {
         
-        // Add an ImageView to the VC
+        addViews()
+        
+        setupImagePawsView()
+        setupDescriptionTextView()
+    }
+    
+    private func addViews() {
+        
+        // Add Views to the VC
         view.addSubview(pawsImageView)
+        view.addSubview(descriptionTextView)
+    }
+    
+    private func setupImagePawsView() {
         
         // Modify this ImageView's Frame :
-        
+        //
         // Give it a specific height and width
         // And specify where on screen to display it,
-        // using x and y coordinates
+        // using x and y coordinates :
         //pawsImageView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
         
         // Turn off AutoResizingContraints for this View
@@ -63,6 +82,10 @@ class ViewController: UIViewController {
         
         // ** If you don't end it with ".isActive = true", it will
         // create the constraint but not activate it (will NOT show on run time)
+    }
+    
+    private func setupDescriptionTextView() {
+        
     }
 }
 
