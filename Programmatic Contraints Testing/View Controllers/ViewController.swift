@@ -23,6 +23,17 @@ class ViewController: UIViewController {
         let textView = UITextView()
         textView.text = "Join us today in our fun and games!"
         
+        // Setup as bold, with a center alignment
+        textView.font = UIFont.boldSystemFont(ofSize: 18)
+        textView.textAlignment = .center
+        
+        // Block the user from interacting with the text view
+        textView.isEditable = false
+        textView.isScrollEnabled = false
+        
+        // Turn off AutoResizingContraints for this View
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        
         return textView
     }()
     
@@ -86,6 +97,16 @@ class ViewController: UIViewController {
     
     private func setupDescriptionTextView() {
         
+        // Constraint the descriptionView's Top anchor, to the pawsView's bottom anchor
+        // Separated by 150 points
+        descriptionTextView.topAnchor.constraint(equalTo: pawsImageView.bottomAnchor, constant: 120).isActive = true
+        
+        // Constrait it's left and right anchors to the VC's left and right,
+        descriptionTextView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        descriptionTextView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        
+        // Constraint it's bottom to the view's bottom anchor
+        descriptionTextView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
     }
 }
 
