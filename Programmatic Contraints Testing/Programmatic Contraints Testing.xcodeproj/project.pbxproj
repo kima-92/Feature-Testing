@@ -40,6 +40,8 @@
 		FA7190FE24B796510045E65A = {
 			isa = PBXGroup;
 			children = (
+				FA71911F24B7967F0045E65A /* View Controllers */,
+				FA71911E24B7966E0045E65A /* Storyboards */,
 				FA71910924B796510045E65A /* Programmatic Contraints Testing */,
 				FA71910824B796510045E65A /* Products */,
 			);
@@ -58,13 +60,27 @@
 			children = (
 				FA71910A24B796510045E65A /* AppDelegate.swift */,
 				FA71910C24B796510045E65A /* SceneDelegate.swift */,
-				FA71910E24B796510045E65A /* ViewController.swift */,
-				FA71911024B796510045E65A /* Main.storyboard */,
 				FA71911324B796520045E65A /* Assets.xcassets */,
-				FA71911524B796520045E65A /* LaunchScreen.storyboard */,
 				FA71911824B796520045E65A /* Info.plist */,
 			);
 			path = "Programmatic Contraints Testing";
+			sourceTree = "<group>";
+		};
+		FA71911E24B7966E0045E65A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FA71911024B796510045E65A /* Main.storyboard */,
+				FA71911524B796520045E65A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FA71911F24B7967F0045E65A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA71910E24B796510045E65A /* ViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

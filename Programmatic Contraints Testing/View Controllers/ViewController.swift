@@ -12,9 +12,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let pawsImage = UIImage(named: "paws")
+        let imageView = UIImageView(image: pawsImage)
+        
+        view.addSubview(imageView)
     }
-
-
+    
 }
 
