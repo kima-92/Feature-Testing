@@ -41,9 +41,14 @@ class ViewController: UIViewController {
         // Center it Horizontally
         // Using the VC'c view
         imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
         // Center it Vertically
         // Using the VC'c view
-        imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        //imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
+        // Setup it's Top Constraint
+        // To this VC's top Constraint, by 100 points
+        imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
         
         // Adjust it's Width
         imageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
