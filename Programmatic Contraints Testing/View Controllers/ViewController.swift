@@ -16,6 +16,9 @@ class ViewController: UIViewController {
         let pawsImage = UIImage(named: "paws")
         let imageView = UIImageView(image: pawsImage)
         
+        // Image should fit entirely in it's frame, regardless of it's frame size
+        imageView.contentMode = .scaleAspectFit
+        
         return imageView
     }()
     
@@ -53,6 +56,7 @@ class ViewController: UIViewController {
         
         setupImagePawsView()
         setupDescriptionTextView()
+        addTopContainer()
     }
     
     private func addViews() {
@@ -60,6 +64,22 @@ class ViewController: UIViewController {
         // Add Views to the VC
         view.addSubview(pawsImageView)
         view.addSubview(descriptionTextView)
+    }
+    
+    private func addTopContainer() {
+        
+        // Create a new View
+        let topImageContainerView = UIView()
+        
+        // Give it a background color to visualize it
+        topImageContainerView.backgroundColor = .blue
+        
+        // Add it to this VC's View
+        view.addSubview(topImageContainerView)
+        
+        // Place it on screen using the x, y coordinates
+        // Give it a size (height, width)
+        topImageContainerView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
     }
     
     private func setupImagePawsView() {
