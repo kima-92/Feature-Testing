@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     
     // MARK: - Properties
     
+    let topImageContainerView = UIView()
+    
     var pawsImageView: UIImageView = {
         let pawsImage = UIImage(named: "paws")
         let imageView = UIImageView(image: pawsImage)
@@ -54,22 +56,22 @@ class ViewController: UIViewController {
         
         addViews()
         
+        addTopContainer()
         setupImagePawsView()
         setupDescriptionTextView()
-        addTopContainer()
     }
     
     private func addViews() {
         
         // Add Views to the VC
-        view.addSubview(pawsImageView)
+        //view.addSubview(pawsImageView)
         view.addSubview(descriptionTextView)
     }
     
     private func addTopContainer() {
         
         // Create a new View
-        let topImageContainerView = UIView()
+        //let topImageContainerView = UIView()
         
         // Give it a background color to visualize it
         topImageContainerView.backgroundColor = .blue
@@ -104,6 +106,23 @@ class ViewController: UIViewController {
     }
     
     private func setupImagePawsView() {
+        
+        // Add it in screen inside the topContainer
+        topImageContainerView.addSubview(pawsImageView)
+        
+        // Turn off AutoResizingContraints for this View
+        pawsImageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Anchor pawsImae to the center of the topContainer
+        pawsImageView.centerXAnchor.constraint(equalTo: topImageContainerView.centerXAnchor).isActive = true
+        pawsImageView.centerYAnchor.constraint(equalTo: topImageContainerView.centerYAnchor).isActive = true
+        
+        // Set it's height,
+        // to be half of the topContainer's height
+        pawsImageView.heightAnchor.constraint(equalTo: topImageContainerView.heightAnchor, multiplier: 0.5).isActive = true
+    }
+    
+    private func firstSetupImagePawsView() {
         
         // Modify this ImageView's Frame :
         //
