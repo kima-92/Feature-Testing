@@ -79,7 +79,28 @@ class ViewController: UIViewController {
         
         // Place it on screen using the x, y coordinates
         // Give it a size (height, width)
-        topImageContainerView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        //topImageContainerView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        
+        // Enable Auto Layout
+        topImageContainerView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Set the height as equal to the view's height,
+        // But with a multiplyer of 0.5
+        // The topContainer needs to be half of the height of the view
+        topImageContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5).isActive = true
+        
+        // Set the top, left and right anchor to match the view's
+        // The topContainer needs to always be at the top half of the view
+        //topImageContainerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        //topImageContainerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        //topImageContainerView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        
+        // ^^ Same thing as above, but using leading and trailing anchors
+        topImageContainerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        topImageContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        topImageContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        
+        
     }
     
     private func setupImagePawsView() {
