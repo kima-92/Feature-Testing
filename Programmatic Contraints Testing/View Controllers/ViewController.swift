@@ -25,11 +25,21 @@ class ViewController: UIViewController {
     }()
     
     var descriptionTextView: UITextView = {
-        let textView = UITextView()
-        textView.text = "Join us today in our fun and games!"
         
-        // Setup as bold, with a center alignment
-        textView.font = UIFont.boldSystemFont(ofSize: 18)
+        // Create the textView
+        let textView = UITextView()
+        
+        //textView.text = "Join us today in our fun and games!"
+        //textView.font = UIFont.boldSystemFont(ofSize: 18)
+        
+        // ^^ Better way of setting up a text with properties
+        let descriptionText = "Join us today in our fun and games!"
+        let descriptionAttributes = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)]
+        let attributedText = NSMutableAttributedString(string: descriptionText, attributes: descriptionAttributes)
+        
+        textView.attributedText = attributedText
+        
+        // Setup with a center alignment
         textView.textAlignment = .center
         
         // Block the user from interacting with the text view
