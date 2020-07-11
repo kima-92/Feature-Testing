@@ -74,7 +74,7 @@ class ViewController: UIViewController {
         //let topImageContainerView = UIView()
         
         // Give it a background color to visualize it
-        topImageContainerView.backgroundColor = .blue
+        //topImageContainerView.backgroundColor = .blue
         
         // Add it to this VC's View
         view.addSubview(topImageContainerView)
@@ -159,7 +159,10 @@ class ViewController: UIViewController {
         
         // Constraint the descriptionView's Top anchor, to the pawsView's bottom anchor
         // Separated by 150 points
-        descriptionTextView.topAnchor.constraint(equalTo: pawsImageView.bottomAnchor, constant: 120).isActive = true
+        //descriptionTextView.topAnchor.constraint(equalTo: topImageContainerView.bottomAnchor, constant: 120).isActive = true
+        
+        // Adjust it's top anchor to the topContainer's bottom anchor instead
+        descriptionTextView.topAnchor.constraint(equalTo: topImageContainerView.bottomAnchor).isActive = true
         
         // Constrait it's left and right anchors to the VC's left and right,
         descriptionTextView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
