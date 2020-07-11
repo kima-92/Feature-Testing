@@ -62,6 +62,14 @@ class ViewController: UIViewController {
         return textView
     }()
     
+    private let previousButton: UIButton = {
+        
+        let button = UIButton(type: .system)
+        button.setTitle("Prev", for: .normal)
+        
+        return button
+    }()
+    
     // MARK: - DidLoad
     
     override func viewDidLoad() {
@@ -79,6 +87,8 @@ class ViewController: UIViewController {
         addTopContainer()
         setupImagePawsView()
         setupDescriptionTextView()
+        
+        setupBottomControls()
     }
     
     private func addViews() {
@@ -86,6 +96,13 @@ class ViewController: UIViewController {
         // Add Views to the VC
         //view.addSubview(pawsImageView)
         view.addSubview(descriptionTextView)
+    }
+    
+    fileprivate func setupBottomControls() {
+        view.addSubview(previousButton)
+        
+        previousButton.backgroundColor = .red
+        previousButton.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
     }
     
     private func addTopContainer() {
