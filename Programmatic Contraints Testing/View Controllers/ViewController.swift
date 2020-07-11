@@ -66,6 +66,7 @@ class ViewController: UIViewController {
         
         let button = UIButton(type: .system)
         button.setTitle("Prev", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
         
         return button
     }()
@@ -102,7 +103,16 @@ class ViewController: UIViewController {
         view.addSubview(previousButton)
         
         previousButton.backgroundColor = .red
-        previousButton.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
+        //previousButton.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
+        
+        // MARK: - Different way of activating constraints
+        // By creating an array of Activated Constraints
+        NSLayoutConstraint.activate([
+            previousButton.topAnchor.constraint(equalTo: view.topAnchor),
+            previousButton.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            previousButton.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            previousButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
     }
     
     private func addTopContainer() {
