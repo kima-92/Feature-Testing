@@ -13,4 +13,10 @@ import Foundation
  
     Remeber the "Outer" View needs to be added to another View first,
     even if it's the VC's view, before you try to add another view inside of it.
+ 
+ -  When adding padding to a LEFT ANCHOR, your most likely gonna have to use a
+    negative number for the constant.
+ 
+    While using a positive number, your pushing it further away left. At some point
+    it will desappear from the screen
  */
