@@ -19,4 +19,9 @@ import Foundation
  
     While using a positive number, your pushing it further away left. At some point
     it will desappear from the screen
+ 
+ -  If need to constrain to the VC's SAFE AREA instead of it's entire view :
+    use "safeAreaLayoutGuide" like so :
+        
+        "yourButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor"
  */

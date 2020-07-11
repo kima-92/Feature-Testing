@@ -108,7 +108,7 @@ class ViewController: UIViewController {
         // MARK: - Different way of activating constraints
         // By creating an array of Activated Constraints
         NSLayoutConstraint.activate([
-            previousButton.topAnchor.constraint(equalTo: view.topAnchor),
+            previousButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             previousButton.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             previousButton.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             previousButton.heightAnchor.constraint(equalToConstant: 50)
