@@ -31,10 +31,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Add the windowScene to the window
         window?.windowScene = windowScene
         
-        // Set it's Root VC
-        let randomViewController = UIViewController()
-        randomViewController.view.backgroundColor = .purple
-        window?.rootViewController = randomViewController
+        // Set it's Root VC to be a swipingController
+        let layout = UICollectionViewFlowLayout()
+        let swipingController = SwipingController(collectionViewLayout: layout)
+        
+        window?.rootViewController = swipingController
         
         // Make this window Visible
         window?.makeKeyAndVisible()
