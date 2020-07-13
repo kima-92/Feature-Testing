@@ -81,7 +81,7 @@ class ViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        button.setTitleColor(.gray, for: .normal)
+        button.setTitleColor(.mainPink, for: .normal)
         
         return button
     }()
@@ -91,8 +91,9 @@ class ViewController: UIViewController {
         
         pc.currentPage = 0
         pc.numberOfPages = 4
-        pc.currentPageIndicatorTintColor = .red
-        pc.pageIndicatorTintColor = .gray
+        pc.currentPageIndicatorTintColor = .mainPink
+        let pinkColor = UIColor(red: 249/255, green: 207/255, blue: 224/255, alpha: 1)
+        pc.pageIndicatorTintColor = pinkColor
         
         return pc
     }()
