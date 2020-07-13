@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SwipingController: UICollectionViewController {
+class SwipingController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     // MARK: - DidLoad
     
@@ -16,18 +16,31 @@ class SwipingController: UICollectionViewController {
         super.viewDidLoad()
         
         collectionView.backgroundColor = .green
+        
+        // Register a Cell to this CollectionViewController
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellId")
     }
     
+    // Number of items per Section
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4
     }
     
+    // Cell for Items
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
         
         cell.backgroundColor = .red
         return cell
+    }
+    
+    // Determine the size of each Cell
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        //return CGSize(width: 100, height: 100)
+        
+        // Make each cell the same size as the entire view
+        return CGSize(width: view.frame.width, height: view.frame.height)
     }
 }
