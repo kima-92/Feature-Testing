@@ -86,6 +86,17 @@ class ViewController: UIViewController {
         return button
     }()
     
+    private let pageControl: UIPageControl = {
+        let pc = UIPageControl()
+        
+        pc.currentPage = 0
+        pc.numberOfPages = 4
+        pc.currentPageIndicatorTintColor = .red
+        pc.pageIndicatorTintColor = .gray
+        
+        return pc
+    }()
+    
     // MARK: - DidLoad
     
     override func viewDidLoad() {
@@ -116,15 +127,8 @@ class ViewController: UIViewController {
     
     fileprivate func setupBottomControls() {
         
-//        let yellowView = UIView()
-//        yellowView.backgroundColor = .yellow
-        let greenView = UIView()
-        greenView.backgroundColor = .green
-//        let blueView = UIView()
-//        blueView.backgroundColor = .blue
-        
         // Create a Horizontal StackView to hold the bottom Buttons
-        let bottomControlsStackView = UIStackView(arrangedSubviews: [previousButton, greenView, nextButton])
+        let bottomControlsStackView = UIStackView(arrangedSubviews: [previousButton, pageControl, nextButton])
         
         bottomControlsStackView.translatesAutoresizingMaskIntoConstraints = false
         bottomControlsStackView.distribution = .fillEqually
