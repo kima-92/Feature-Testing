@@ -25,6 +25,11 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         collectionView.isPagingEnabled = true
     }
     
+    // Setup the space between cells
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
     // Number of items per Section
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4
