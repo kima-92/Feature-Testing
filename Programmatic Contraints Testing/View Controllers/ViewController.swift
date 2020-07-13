@@ -65,8 +65,23 @@ class ViewController: UIViewController {
     private let previousButton: UIButton = {
         
         let button = UIButton(type: .system)
-        button.setTitle("Prev", for: .normal)
+        button.setTitle("PREV", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.setTitleColor(.gray, for: .normal)
+        
+        return button
+    }()
+    
+    private let nextButton: UIButton = {
+        
+        let button = UIButton(type: .system)
+        button.setTitle("NEXT", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.setTitleColor(.gray, for: .normal)
         
         return button
     }()
@@ -101,15 +116,15 @@ class ViewController: UIViewController {
     
     fileprivate func setupBottomControls() {
         
-        let yellowView = UIView()
-        yellowView.backgroundColor = .yellow
+//        let yellowView = UIView()
+//        yellowView.backgroundColor = .yellow
         let greenView = UIView()
         greenView.backgroundColor = .green
-        let blueView = UIView()
-        blueView.backgroundColor = .blue
+//        let blueView = UIView()
+//        blueView.backgroundColor = .blue
         
         // Create a Horizontal StackView to hold the bottom Buttons
-        let bottomControlsStackView = UIStackView(arrangedSubviews: [yellowView, greenView, blueView])
+        let bottomControlsStackView = UIStackView(arrangedSubviews: [previousButton, greenView, nextButton])
         
         bottomControlsStackView.translatesAutoresizingMaskIntoConstraints = false
         bottomControlsStackView.distribution = .fillEqually
