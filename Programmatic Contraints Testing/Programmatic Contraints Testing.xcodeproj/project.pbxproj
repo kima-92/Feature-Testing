@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FA24528524BC019C00E6DBBF /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24528424BC019C00E6DBBF /* ColorExtension.swift */; };
+		FA6CEF6824BCB0D6008051DE /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6CEF6724BCB0D6008051DE /* SwipingController.swift */; };
 		FA71910B24B796510045E65A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71910A24B796510045E65A /* AppDelegate.swift */; };
 		FA71910D24B796510045E65A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71910C24B796510045E65A /* SceneDelegate.swift */; };
 		FA71910F24B796510045E65A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71910E24B796510045E65A /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		FA24528424BC019C00E6DBBF /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		FA6CEF6724BCB0D6008051DE /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
 		FA71910724B796510045E65A /* Programmatic Contraints Testing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Programmatic Contraints Testing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA71910A24B796510045E65A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA71910C24B796510045E65A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,11 +43,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA6CEF6624BCB0B5008051DE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA6CEF6724BCB0D6008051DE /* SwipingController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		FA7190FE24B796510045E65A = {
 			isa = PBXGroup;
 			children = (
 				FA71911E24B7966E0045E65A /* Storyboards */,
 				FA71911F24B7967F0045E65A /* View Controllers */,
+				FA6CEF6624BCB0B5008051DE /* Controllers */,
 				FA71912024BA3A440045E65A /* Helper */,
 				FA71910924B796510045E65A /* Programmatic Contraints Testing */,
 				FA71910824B796510045E65A /* Products */,
@@ -173,6 +184,7 @@
 				FA71910D24B796510045E65A /* SceneDelegate.swift in Sources */,
 				FA71912224BA3A6B0045E65A /* Notes.swift in Sources */,
 				FA24528524BC019C00E6DBBF /* ColorExtension.swift in Sources */,
+				FA6CEF6824BCB0D6008051DE /* SwipingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

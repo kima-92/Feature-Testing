@@ -24,4 +24,22 @@ import Foundation
     use "safeAreaLayoutGuide" like so :
         
         "yourButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor"
+ 
+ 
+ -  Since we are not using the Storyboards for this App, we have to construct it from
+    scratch in the SceneDelegate file :
+        
+        Go to the SceneDelegate file
+ 
+        Inside the "willConnectTo" function :
+        
+            1.   Name the property in the guard-let statement as -> "windowScene"
+            2.   Create a new window -> which will hold/display our ViewControllers,
+                with the frame/bounds of the windowScene
+            3.   Set the window's windoScene
+            4.   Add some Root ViwController to the window
+            5.   Make the window visible
+            6.
+            7.
+            8.
  */
