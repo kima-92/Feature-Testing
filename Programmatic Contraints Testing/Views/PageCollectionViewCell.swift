@@ -14,7 +14,7 @@ class PageCollectionViewCell: UICollectionViewCell {
     
     let topImageContainerView = UIView()
     
-    var pawsImageView: UIImageView = {
+    var mainImageView: UIImageView = {
         let pawsImage = UIImage(named: "paws")
         let imageView = UIImageView(image: pawsImage)
         
@@ -102,18 +102,18 @@ class PageCollectionViewCell: UICollectionViewCell {
     private func setupImagePawsView() {
         
         // Add it in screen inside the topContainer
-        topImageContainerView.addSubview(pawsImageView)
+        topImageContainerView.addSubview(mainImageView)
         
         // Turn off AutoResizingContraints for this View
-        pawsImageView.translatesAutoresizingMaskIntoConstraints = false
+        mainImageView.translatesAutoresizingMaskIntoConstraints = false
         
         // Anchor pawsImae to the center of the topContainer
-        pawsImageView.centerXAnchor.constraint(equalTo: topImageContainerView.centerXAnchor).isActive = true
-        pawsImageView.centerYAnchor.constraint(equalTo: topImageContainerView.centerYAnchor).isActive = true
+        mainImageView.centerXAnchor.constraint(equalTo: topImageContainerView.centerXAnchor).isActive = true
+        mainImageView.centerYAnchor.constraint(equalTo: topImageContainerView.centerYAnchor).isActive = true
         
         // Set it's height,
         // to be half of the topContainer's height
-        pawsImageView.heightAnchor.constraint(equalTo: topImageContainerView.heightAnchor, multiplier: 0.5).isActive = true
+        mainImageView.heightAnchor.constraint(equalTo: topImageContainerView.heightAnchor, multiplier: 0.5).isActive = true
     }
     
     private func setupDescriptionTextView() {

@@ -10,6 +10,10 @@ import UIKit
 
 class SwipingController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    // MARK: - Properties
+    
+    let imageNames = ["paws", "blackHearts", "blackLeaf"]
+    
     // MARK: - DidLoad
     
     override func viewDidLoad() {
@@ -32,15 +36,21 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     
     // Number of items per Section
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        
+        return imageNames.count
     }
     
     // Cell for Items
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+        // Casting the cell as a PageCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as? PageCollectionViewCell else { return UICollectionViewCell()
+        }
         
-//        cell.backgroundColor = indexPath.item % 2 == 0 ? .red : .green
+        // Pass in the correct image 
+        let imageName = imageNames[indexPath.item]
+        cell.mainImageView.image = UIImage(named: imageName)
+        
         return cell
     }
     
