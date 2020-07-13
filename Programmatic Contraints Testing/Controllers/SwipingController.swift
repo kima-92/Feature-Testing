@@ -18,7 +18,7 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         collectionView.backgroundColor = .white
         
         // Register a Cell to this CollectionViewController
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellId")
+        collectionView.register(PageCollectionViewCell.self, forCellWithReuseIdentifier: "cellId")
         
         // Make the cells snap to the edges of the screen,
         // displaying one full cell at a time
@@ -40,7 +40,7 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
         
-        cell.backgroundColor = .red
+//        cell.backgroundColor = indexPath.item % 2 == 0 ? .red : .green
         return cell
     }
     
