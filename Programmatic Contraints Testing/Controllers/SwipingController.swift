@@ -15,10 +15,14 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.backgroundColor = .green
+        collectionView.backgroundColor = .white
         
         // Register a Cell to this CollectionViewController
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellId")
+        
+        // Make the cells snap to the edges of the screen,
+        // displaying one full cell at a time
+        collectionView.isPagingEnabled = true
     }
     
     // Number of items per Section

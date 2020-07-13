@@ -31,10 +31,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Add the windowScene to the window
         window?.windowScene = windowScene
         
-        // Set it's Root VC to be a swipingController
+        // Instance of SwipingController, with a horizontal scrolling layout
         let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
         let swipingController = SwipingController(collectionViewLayout: layout)
         
+        // Set window's Root VC to be swipingController
         window?.rootViewController = swipingController
         
         // Make this window Visible
