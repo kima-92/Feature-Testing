@@ -39,7 +39,4 @@ import Foundation
             3.   Set the window's windoScene
             4.   Add some Root ViwController to the window
             5.   Make the window visible
-            6.
-            7.
-            8.
  */

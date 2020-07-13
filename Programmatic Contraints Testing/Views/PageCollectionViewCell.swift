@@ -12,6 +12,32 @@ class PageCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Properties
     
+    var page: Page? {
+        didSet {
+            guard let page = page else { return }
+            
+            mainImageView.image = UIImage(named: page.imageName)
+            
+            // First Attributed String
+            let descriptionText = page.headerText
+            let descriptionAttributes = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)]
+            let attributedText = NSMutableAttributedString(string: descriptionText, attributes: descriptionAttributes)
+            
+            // Append another
+            let secondString = "\n\n\nAre you ready for loads and loads of fun? Don't wait any longer! We hope to see you in our store soon."
+            let secondAttributes = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 13), NSAttributedString.Key.foregroundColor: UIColor.gray]
+            let secondAttributedString = NSAttributedString(string: secondString, attributes: secondAttributes)
+            
+            attributedText.append(secondAttributedString)
+            
+            // Add it to the textView
+            descriptionTextView.attributedText = attributedText
+            descriptionTextView.textAlignment = .center
+            
+            // TODO: - Text is not properly setting it's size and it's bold font
+        }
+    }
+    
     let topImageContainerView = UIView()
     
     var mainImageView: UIImageView = {
@@ -28,23 +54,8 @@ class PageCollectionViewCell: UICollectionViewCell {
         
         // Create the textView
         let textView = UITextView()
-        
-        // First String
-        let descriptionText = "Join us today in our fun and games!"
-        let descriptionAttributes = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)]
-        let attributedText = NSMutableAttributedString(string: descriptionText, attributes: descriptionAttributes)
-        
-        // Append another
-        let secondString = "\n\n\nAre you ready for loads and loads of fun? Don't wait any longer! We hope to see you in our store soon."
-        let secondAttributes = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 13), NSAttributedString.Key.foregroundColor: UIColor.gray]
-        let secondAttributedString = NSAttributedString(string: secondString, attributes: secondAttributes)
-        
-        attributedText.append(secondAttributedString)
-        
-        // Add it to the textView
-        textView.attributedText = attributedText
-        
-        // Setup with a center alignment
+
+//        // Setup with a center alignment
         textView.textAlignment = .center
         
         // Block the user from interacting with the text view

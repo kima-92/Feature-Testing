@@ -12,7 +12,11 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     
     // MARK: - Properties
     
-    let imageNames = ["paws", "blackHearts", "blackLeaf"]
+    let pages = [
+        Page(imageName: "paws", headerText: "Join us today in our fun and games!"),
+        Page(imageName: "blackHearts", headerText: "Subscribe and get coupons on our daily events"),
+        Page(imageName: "blackLeaf", headerText: "VIP members special services")
+    ]
     
     // MARK: - DidLoad
     
@@ -37,7 +41,7 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     // Number of items per Section
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return imageNames.count
+        return pages.count
     }
     
     // Cell for Items
@@ -47,9 +51,11 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as? PageCollectionViewCell else { return UICollectionViewCell()
         }
         
-        // Pass in the correct image 
-        let imageName = imageNames[indexPath.item]
-        cell.mainImageView.image = UIImage(named: imageName)
+        // Pass in the correct image and description
+        let page = pages[indexPath.item]
+        
+        cell.mainImageView.image = UIImage(named: page.imageName)
+        cell.descriptionTextView.text = page.headerText
         
         return cell
     }
