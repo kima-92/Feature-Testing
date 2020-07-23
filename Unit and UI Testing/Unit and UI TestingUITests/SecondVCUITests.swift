@@ -8,6 +8,10 @@
 
 import XCTest
 
+/*
+My review documentation of UI and Unit Testing https://docs.google.com/document/d/1B01B6QdtugYsiXKyFS61Ir3m58na_GrLZDVZvldJ9HA/edit
+ */
+
 class SecondVCUITests: XCTestCase {
     
     func testAddText() {
@@ -72,15 +76,15 @@ class SecondVCUITests: XCTestCase {
         // Tap on numbers TxtFiled
         app.textFields["Numbers"].tap()
         
-        // Using the "NameTxtFieldyes" identifier to get the nameTextField
-        let nametxtfieldTextField = app.textFields["NameTxtFieldyes"]
+        // Using the "NameTxtFieldyes" ACCESSIBILITY IDENTIFIER to get the nameTextField
+        let nameTextField = app.textFields["NameTxtFieldyes"]
         
         // tap on the nameTxtField
-        nametxtfieldTextField.tap()
-        nametxtfieldTextField.tap()
+        nameTextField.tap()
+        nameTextField.tap()
         
         // add some text
-        nametxtfieldTextField.typeText("Wilma")
+        nameTextField.typeText("Wilma")
         
         // Grab the NavigationBar
         let unitAndUiTestingSecondviewNavigationBar = app.navigationBars["Unit_and_UI_Testing.SecondView"]
@@ -89,6 +93,5 @@ class SecondVCUITests: XCTestCase {
         unitAndUiTestingSecondviewNavigationBar.buttons["Add"].tap()
         // Back button
         unitAndUiTestingSecondviewNavigationBar.buttons["Back"].tap()
-        
     }
 }
