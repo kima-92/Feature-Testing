@@ -15,10 +15,18 @@
 		FA0F5A3E24C9F0BA00CE21AC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F5A3D24C9F0BA00CE21AC /* FirstViewController.swift */; };
 		FA0F5A4624C9F14900CE21AC /* Unit_and_UI_TestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F5A4524C9F14900CE21AC /* Unit_and_UI_TestingTests.swift */; };
 		FA0F5A4E24C9F7A400CE21AC /* FirstVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F5A4D24C9F7A400CE21AC /* FirstVCTests.swift */; };
+		FA0F5A5624CA08AA00CE21AC /* Unit_and_UI_TestingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F5A5524CA08AA00CE21AC /* Unit_and_UI_TestingUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		FA0F5A4824C9F14900CE21AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA0F5A1C24C9F06100CE21AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA0F5A2324C9F06100CE21AC;
+			remoteInfo = "Unit and UI Testing";
+		};
+		FA0F5A5824CA08AA00CE21AC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FA0F5A1C24C9F06100CE21AC /* Project object */;
 			proxyType = 1;
@@ -40,6 +48,9 @@
 		FA0F5A4524C9F14900CE21AC /* Unit_and_UI_TestingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit_and_UI_TestingTests.swift; sourceTree = "<group>"; };
 		FA0F5A4724C9F14900CE21AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0F5A4D24C9F7A400CE21AC /* FirstVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVCTests.swift; sourceTree = "<group>"; };
+		FA0F5A5324CA08AA00CE21AC /* Unit and UI TestingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit and UI TestingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA0F5A5524CA08AA00CE21AC /* Unit_and_UI_TestingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit_and_UI_TestingUITests.swift; sourceTree = "<group>"; };
+		FA0F5A5724CA08AA00CE21AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +68,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA0F5A5024CA08AA00CE21AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -67,6 +85,7 @@
 				FA0F5A3C24C9F08900CE21AC /* View Controllers */,
 				FA0F5A2624C9F06100CE21AC /* Unit and UI Testing */,
 				FA0F5A4424C9F14900CE21AC /* Unit and UI TestingTests */,
+				FA0F5A5424CA08AA00CE21AC /* Unit and UI TestingUITests */,
 				FA0F5A2524C9F06100CE21AC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +95,7 @@
 			children = (
 				FA0F5A2424C9F06100CE21AC /* Unit and UI Testing.app */,
 				FA0F5A4324C9F14900CE21AC /* Unit and UI TestingTests.xctest */,
+				FA0F5A5324CA08AA00CE21AC /* Unit and UI TestingUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,6 +138,15 @@
 			path = "Unit and UI TestingTests";
 			sourceTree = "<group>";
 		};
+		FA0F5A5424CA08AA00CE21AC /* Unit and UI TestingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FA0F5A5524CA08AA00CE21AC /* Unit_and_UI_TestingUITests.swift */,
+				FA0F5A5724CA08AA00CE21AC /* Info.plist */,
+			);
+			path = "Unit and UI TestingUITests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,6 +185,24 @@
 			productReference = FA0F5A4324C9F14900CE21AC /* Unit and UI TestingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		FA0F5A5224CA08AA00CE21AC /* Unit and UI TestingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA0F5A5A24CA08AA00CE21AC /* Build configuration list for PBXNativeTarget "Unit and UI TestingUITests" */;
+			buildPhases = (
+				FA0F5A4F24CA08AA00CE21AC /* Sources */,
+				FA0F5A5024CA08AA00CE21AC /* Frameworks */,
+				FA0F5A5124CA08AA00CE21AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA0F5A5924CA08AA00CE21AC /* PBXTargetDependency */,
+			);
+			name = "Unit and UI TestingUITests";
+			productName = "Unit and UI TestingUITests";
+			productReference = FA0F5A5324CA08AA00CE21AC /* Unit and UI TestingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -170,6 +217,10 @@
 						CreatedOnToolsVersion = 11.6;
 					};
 					FA0F5A4224C9F14900CE21AC = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = FA0F5A2324C9F06100CE21AC;
+					};
+					FA0F5A5224CA08AA00CE21AC = {
 						CreatedOnToolsVersion = 11.6;
 						TestTargetID = FA0F5A2324C9F06100CE21AC;
 					};
@@ -190,6 +241,7 @@
 			targets = (
 				FA0F5A2324C9F06100CE21AC /* Unit and UI Testing */,
 				FA0F5A4224C9F14900CE21AC /* Unit and UI TestingTests */,
+				FA0F5A5224CA08AA00CE21AC /* Unit and UI TestingUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -206,6 +258,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FA0F5A4124C9F14900CE21AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA0F5A5124CA08AA00CE21AC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -234,6 +293,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA0F5A4F24CA08AA00CE21AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA0F5A5624CA08AA00CE21AC /* Unit_and_UI_TestingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -241,6 +308,11 @@
 			isa = PBXTargetDependency;
 			target = FA0F5A2324C9F06100CE21AC /* Unit and UI Testing */;
 			targetProxy = FA0F5A4824C9F14900CE21AC /* PBXContainerItemProxy */;
+		};
+		FA0F5A5924CA08AA00CE21AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA0F5A2324C9F06100CE21AC /* Unit and UI Testing */;
+			targetProxy = FA0F5A5824CA08AA00CE21AC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -454,6 +526,44 @@
 			};
 			name = Release;
 		};
+		FA0F5A5B24CA08AA00CE21AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YQ69KMC87V;
+				INFOPLIST_FILE = "Unit and UI TestingUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wilmarodriguez.Unit-and-UI-TestingUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Unit and UI Testing";
+			};
+			name = Debug;
+		};
+		FA0F5A5C24CA08AA00CE21AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YQ69KMC87V;
+				INFOPLIST_FILE = "Unit and UI TestingUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wilmarodriguez.Unit-and-UI-TestingUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Unit and UI Testing";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -480,6 +590,15 @@
 			buildConfigurations = (
 				FA0F5A4B24C9F14900CE21AC /* Debug */,
 				FA0F5A4C24C9F14900CE21AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA0F5A5A24CA08AA00CE21AC /* Build configuration list for PBXNativeTarget "Unit and UI TestingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA0F5A5B24CA08AA00CE21AC /* Debug */,
+				FA0F5A5C24CA08AA00CE21AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
