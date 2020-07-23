@@ -17,6 +17,7 @@
 		FA0F5A4E24C9F7A400CE21AC /* FirstVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F5A4D24C9F7A400CE21AC /* FirstVCTests.swift */; };
 		FA0F5A5624CA08AA00CE21AC /* Unit_and_UI_TestingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F5A5524CA08AA00CE21AC /* Unit_and_UI_TestingUITests.swift */; };
 		FA0F5A5F24CA0B6600CE21AC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F5A5E24CA0B6600CE21AC /* SecondViewController.swift */; };
+		FA0F5A6124CA1A8E00CE21AC /* SecondVCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F5A6024CA1A8E00CE21AC /* SecondVCUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		FA0F5A5524CA08AA00CE21AC /* Unit_and_UI_TestingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit_and_UI_TestingUITests.swift; sourceTree = "<group>"; };
 		FA0F5A5724CA08AA00CE21AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0F5A5E24CA0B6600CE21AC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		FA0F5A6024CA1A8E00CE21AC /* SecondVCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVCUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			children = (
 				FA0F5A5524CA08AA00CE21AC /* Unit_and_UI_TestingUITests.swift */,
 				FA0F5A5724CA08AA00CE21AC /* Info.plist */,
+				FA0F5A6024CA1A8E00CE21AC /* SecondVCUITests.swift */,
 			);
 			path = "Unit and UI TestingUITests";
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0F5A6124CA1A8E00CE21AC /* SecondVCUITests.swift in Sources */,
 				FA0F5A5624CA08AA00CE21AC /* Unit_and_UI_TestingUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
