@@ -7,6 +7,10 @@
 //
 
 import XCTest
+@testable import Unit_and_UI_Testing
+// * This project's Target, and this Unit Test Bundle Target:
+// They are separate on purpose!
+// To test it, you need to import it with @testable
 
 class FirstVCTests: XCTestCase {
 
