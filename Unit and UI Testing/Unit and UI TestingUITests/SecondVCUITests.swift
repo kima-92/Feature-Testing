@@ -60,4 +60,35 @@ class SecondVCUITests: XCTestCase {
         // How it recorded tapping on the back button
         unitAndUiTestingSecondviewNavigationBar.buttons["Back"].tap()
     }
+    
+    func testSecondAddTxt() {
+        
+        let app = XCUIApplication()
+        app.launch()
+        
+        // Tap on Next
+        app/*@START_MENU_TOKEN@*/.staticTexts["Next"]/*[[".buttons[\"Next\"].staticTexts[\"Next\"]",".staticTexts[\"Next\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        // Tap on numbers TxtFiled
+        app.textFields["Numbers"].tap()
+        
+        // Using the "NameTxtFieldyes" identifier to get the nameTextField
+        let nametxtfieldTextField = app.textFields["NameTxtFieldyes"]
+        
+        // tap on the nameTxtField
+        nametxtfieldTextField.tap()
+        nametxtfieldTextField.tap()
+        
+        // add some text
+        nametxtfieldTextField.typeText("Wilma")
+        
+        // Grab the NavigationBar
+        let unitAndUiTestingSecondviewNavigationBar = app.navigationBars["Unit_and_UI_Testing.SecondView"]
+        
+        // Add button
+        unitAndUiTestingSecondviewNavigationBar.buttons["Add"].tap()
+        // Back button
+        unitAndUiTestingSecondviewNavigationBar.buttons["Back"].tap()
+        
+    }
 }
