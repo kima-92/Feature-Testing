@@ -16,6 +16,7 @@
 		FA0F5A4624C9F14900CE21AC /* Unit_and_UI_TestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F5A4524C9F14900CE21AC /* Unit_and_UI_TestingTests.swift */; };
 		FA0F5A4E24C9F7A400CE21AC /* FirstVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F5A4D24C9F7A400CE21AC /* FirstVCTests.swift */; };
 		FA0F5A5624CA08AA00CE21AC /* Unit_and_UI_TestingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F5A5524CA08AA00CE21AC /* Unit_and_UI_TestingUITests.swift */; };
+		FA0F5A5F24CA0B6600CE21AC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F5A5E24CA0B6600CE21AC /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		FA0F5A5324CA08AA00CE21AC /* Unit and UI TestingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit and UI TestingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0F5A5524CA08AA00CE21AC /* Unit_and_UI_TestingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit_and_UI_TestingUITests.swift; sourceTree = "<group>"; };
 		FA0F5A5724CA08AA00CE21AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA0F5A5E24CA0B6600CE21AC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				FA0F5A3D24C9F0BA00CE21AC /* FirstViewController.swift */,
+				FA0F5A5E24CA0B6600CE21AC /* SecondViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0F5A5F24CA0B6600CE21AC /* SecondViewController.swift in Sources */,
 				FA0F5A3E24C9F0BA00CE21AC /* FirstViewController.swift in Sources */,
 				FA0F5A2824C9F06100CE21AC /* AppDelegate.swift in Sources */,
 				FA0F5A2A24C9F06100CE21AC /* SceneDelegate.swift in Sources */,
