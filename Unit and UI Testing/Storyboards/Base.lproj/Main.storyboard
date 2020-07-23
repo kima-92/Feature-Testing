@@ -85,16 +85,25 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="274" height="91.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="Red"/>
+                                                <connections>
+                                                    <action selector="redButtonTapped:" destination="ec7-bE-Kb1" eventType="touchUpInside" id="OqF-H6-Vyx"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LU2-CA-uO5">
                                                 <rect key="frame" x="0.0" y="91.5" width="274" height="91"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="Blue"/>
+                                                <connections>
+                                                    <action selector="blueButtonTapped:" destination="ec7-bE-Kb1" eventType="touchUpInside" id="Uto-I9-OqT"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jy1-sl-sN4">
                                                 <rect key="frame" x="0.0" y="182.5" width="274" height="91.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="Yellow"/>
+                                                <connections>
+                                                    <action selector="yellowButtonTapped:" destination="ec7-bE-Kb1" eventType="touchUpInside" id="RZm-Mv-0am"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -114,8 +123,18 @@
                         <viewLayoutGuide key="safeArea" id="yK6-uE-6el"/>
                     </view>
                     <navigationItem key="navigationItem" id="Qfb-Kb-esX">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="YGj-LT-IzD"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="YGj-LT-IzD">
+                            <connections>
+                                <action selector="addBarButtonTapped:" destination="ec7-bE-Kb1" id="baG-zX-ddZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nameTextField" destination="QxT-RJ-J0R" id="ogE-Mx-snj"/>
+                        <outlet property="numbersTextField" destination="wWn-CT-vY4" id="h9W-jd-oo6"/>
+                        <outlet property="string1TextField" destination="ePp-Ug-NEc" id="hHR-A2-Ki5"/>
+                        <outlet property="string2TextField" destination="DwA-SR-89a" id="Pa7-jQ-DTg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tXC-D0-kaJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
