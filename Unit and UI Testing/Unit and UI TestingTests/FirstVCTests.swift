@@ -49,4 +49,16 @@ class FirstVCTests: XCTestCase {
         // Test with custome message
         XCTAssert(result == 10, "testSubtrack did not give expected result")
     }
+    
+    func testMultiply() {
+        let a = 2
+        let b = 3
+        
+        let firstVC = FirstViewController()
+        
+        let result = firstVC.multiply(a: a, b: b)
+        
+        // Check if it's equal
+        XCTAssertEqual(result, 4)
+    }
 }
