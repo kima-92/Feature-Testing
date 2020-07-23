@@ -14,6 +14,7 @@
 		FA0F5A3424C9F06300CE21AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0F5A3224C9F06300CE21AC /* LaunchScreen.storyboard */; };
 		FA0F5A3E24C9F0BA00CE21AC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F5A3D24C9F0BA00CE21AC /* FirstViewController.swift */; };
 		FA0F5A4624C9F14900CE21AC /* Unit_and_UI_TestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F5A4524C9F14900CE21AC /* Unit_and_UI_TestingTests.swift */; };
+		FA0F5A4E24C9F7A400CE21AC /* FirstVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F5A4D24C9F7A400CE21AC /* FirstVCTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		FA0F5A4324C9F14900CE21AC /* Unit and UI TestingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit and UI TestingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0F5A4524C9F14900CE21AC /* Unit_and_UI_TestingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit_and_UI_TestingTests.swift; sourceTree = "<group>"; };
 		FA0F5A4724C9F14900CE21AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA0F5A4D24C9F7A400CE21AC /* FirstVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVCTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				FA0F5A4524C9F14900CE21AC /* Unit_and_UI_TestingTests.swift */,
 				FA0F5A4724C9F14900CE21AC /* Info.plist */,
+				FA0F5A4D24C9F7A400CE21AC /* FirstVCTests.swift */,
 			);
 			path = "Unit and UI TestingTests";
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0F5A4624C9F14900CE21AC /* Unit_and_UI_TestingTests.swift in Sources */,
+				FA0F5A4E24C9F7A400CE21AC /* FirstVCTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
