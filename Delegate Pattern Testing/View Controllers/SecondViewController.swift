@@ -11,7 +11,16 @@ import UIKit
 // MARK: - BOSS
 // Know all the information, and knows how to do things
 
+protocol ColorSelectionDelegate {
+    func didSelectColor(color: UIColor)
+}
+
 class SecondViewController: UIViewController {
+    
+    // MARK: - Properties
+    
+    // Our INTERN
+    var selectionDelegate: ColorSelectionDelegate?
     
     // MARK: - Outlets
 
@@ -30,22 +39,27 @@ class SecondViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func redButtonTapped(_ sender: UIButton) {
+        selectionDelegate?.didSelectColor(color: .red)
         dismiss(animated: true)
     }
     
     @IBAction func blueButtonTapped(_ sender: UIButton) {
+        selectionDelegate?.didSelectColor(color: .blue)
         dismiss(animated: true)
     }
     
     @IBAction func greenButtonTapped(_ sender: UIButton) {
+        selectionDelegate?.didSelectColor(color: .green)
         dismiss(animated: true)
     }
     
     @IBAction func violetButtonTapped(_ sender: UIButton) {
+        selectionDelegate?.didSelectColor(color: .purple)
         dismiss(animated: true)
     }
     
     @IBAction func yellowButtonTapped(_ sender: UIButton) {
+        selectionDelegate?.didSelectColor(color: .yellow)
         dismiss(animated: true)
     }
 }
