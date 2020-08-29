@@ -16,9 +16,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64J-OQ-frY">
-                                <rect key="frame" x="69.5" y="418" width="275" height="60"/>
+                                <rect key="frame" x="66" y="418" width="282" height="60"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
-                                <state key="normal" title="Choose a color!"/>
+                                <state key="normal" title="Choose a Color!"/>
                                 <connections>
                                     <action selector="chooseColorButtonTapped:" destination="yDf-LQ-WA2" eventType="touchUpInside" id="4qT-Ec-iAO"/>
                                     <segue destination="uxN-0z-j6R" kind="presentation" identifier="ShowColorSelectionScreenSegue" modalPresentationStyle="fullScreen" id="nrM-dR-X9x"/>

@@ -8,14 +8,24 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+// MARK: - INTERN
 
+// Doesn't know what to do.. Waiting for orders
+// Will act accordingly based on what the Boss tells it to do
+
+class FirstViewController: UIViewController {
+    
+    // MARK: - Oulet
+    
     @IBOutlet weak var chooseColorButton: UIButton!
+    
+    // MARK: - ViewDidLoad
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
+    
+    // MARK: - Action
     
     @IBAction func chooseColorButtonTapped(_ sender: UIButton) {
     }
