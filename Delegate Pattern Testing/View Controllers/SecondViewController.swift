@@ -10,13 +10,28 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var redButton: UIButton!
+    @IBOutlet weak var blueButton: UIButton!
+    @IBOutlet weak var greenButton: UIButton!
+    @IBOutlet weak var violetButton: UIButton!
+    @IBOutlet weak var yellowButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func redButtonTapped(_ sender: UIButton) {
+    }
+    @IBAction func blueButtonTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func greenButtonTapped(_ sender: UIButton) {
+    }
+    @IBAction func violetButtonTapped(_ sender: UIButton) {
+    }
+    @IBAction func yellowButtonTapped(_ sender: UIButton) {
+    }
     /*
     // MARK: - Navigation
 

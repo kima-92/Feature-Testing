@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yDf-LQ-WA2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -14,9 +14,27 @@
                     <view key="view" contentMode="scaleToFill" id="5MR-xk-UvY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64J-OQ-frY">
+                                <rect key="frame" x="69.5" y="418" width="275" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                <state key="normal" title="Choose a color!"/>
+                                <connections>
+                                    <action selector="chooseColorButtonTapped:" destination="yDf-LQ-WA2" eventType="touchUpInside" id="4qT-Ec-iAO"/>
+                                    <segue destination="uxN-0z-j6R" kind="presentation" identifier="ShowColorSelectionScreenSegue" modalPresentationStyle="fullScreen" id="nrM-dR-X9x"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="64J-OQ-frY" firstAttribute="centerY" secondItem="5MR-xk-UvY" secondAttribute="centerY" id="Kc2-IV-N13"/>
+                            <constraint firstItem="64J-OQ-frY" firstAttribute="centerX" secondItem="5MR-xk-UvY" secondAttribute="centerX" id="L9m-s3-omN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5M5-iv-q5g"/>
                     </view>
+                    <connections>
+                        <outlet property="chooseColorButton" destination="64J-OQ-frY" id="PyQ-aT-lK0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tv7-ll-l5f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -29,13 +47,74 @@
                     <view key="view" contentMode="scaleToFill" id="vac-Kc-c9d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="RVP-Ss-Yk3">
+                                <rect key="frame" x="30" y="268" width="354" height="360"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTb-Zr-8V9">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                        <state key="normal" title="Red"/>
+                                        <connections>
+                                            <action selector="redButtonTapped:" destination="uxN-0z-j6R" eventType="touchUpInside" id="Xlu-vQ-jsq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ib2-vF-dKI">
+                                        <rect key="frame" x="0.0" y="75" width="354" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                        <state key="normal" title="Blue"/>
+                                        <connections>
+                                            <action selector="blueButtonTapped:" destination="uxN-0z-j6R" eventType="touchUpInside" id="ZbK-z5-zpr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCE-77-s77">
+                                        <rect key="frame" x="0.0" y="150" width="354" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                        <state key="normal" title="Green"/>
+                                        <connections>
+                                            <action selector="greenButtonTapped:" destination="uxN-0z-j6R" eventType="touchUpInside" id="YWp-8J-4VE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inY-sc-Eqn">
+                                        <rect key="frame" x="0.0" y="225" width="354" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                        <state key="normal" title="Violet"/>
+                                        <connections>
+                                            <action selector="violetButtonTapped:" destination="uxN-0z-j6R" eventType="touchUpInside" id="4v9-Qk-xrv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oX0-ID-eHS">
+                                        <rect key="frame" x="0.0" y="300" width="354" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                        <state key="normal" title="Yellow"/>
+                                        <connections>
+                                            <action selector="yellowButtonTapped:" destination="uxN-0z-j6R" eventType="touchUpInside" id="EzQ-ww-nCf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RVP-Ss-Yk3" firstAttribute="centerY" secondItem="vac-Kc-c9d" secondAttribute="centerY" id="Btf-qz-fOa"/>
+                            <constraint firstItem="RVP-Ss-Yk3" firstAttribute="centerX" secondItem="vac-Kc-c9d" secondAttribute="centerX" id="Gla-r2-5xc"/>
+                            <constraint firstItem="qHg-Oo-Pkm" firstAttribute="trailing" secondItem="RVP-Ss-Yk3" secondAttribute="trailing" constant="30" id="RYY-wI-pa2"/>
+                            <constraint firstItem="RVP-Ss-Yk3" firstAttribute="leading" secondItem="qHg-Oo-Pkm" secondAttribute="leading" constant="30" id="uQi-Hh-HCg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qHg-Oo-Pkm"/>
                     </view>
+                    <navigationItem key="navigationItem" id="dmw-hp-Ci2"/>
+                    <connections>
+                        <outlet property="blueButton" destination="Ib2-vF-dKI" id="SLq-w4-mbN"/>
+                        <outlet property="greenButton" destination="fCE-77-s77" id="EFL-lz-XEk"/>
+                        <outlet property="redButton" destination="aTb-Zr-8V9" id="8nh-rb-Oi5"/>
+                        <outlet property="violetButton" destination="inY-sc-Eqn" id="dBp-sL-mEs"/>
+                        <outlet property="yellowButton" destination="oX0-ID-eHS" id="BU5-ZL-6vI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oj1-Rt-5sX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="772" y="68"/>
+            <point key="canvasLocation" x="884" y="68"/>
         </scene>
     </scenes>
 </document>

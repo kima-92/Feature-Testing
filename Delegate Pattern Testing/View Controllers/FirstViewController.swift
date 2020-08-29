@@ -10,13 +10,16 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var chooseColorButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func chooseColorButtonTapped(_ sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 
