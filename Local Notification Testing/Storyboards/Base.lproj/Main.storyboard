@@ -14,18 +14,7 @@
                     <view key="view" contentMode="scaleToFill" id="fZy-92-t4b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I06-u1-E81">
-                                <rect key="frame" x="41.5" y="418" width="331" height="60"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
-                                <state key="normal" title="Create Notification"/>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="I06-u1-E81" firstAttribute="centerX" secondItem="fZy-92-t4b" secondAttribute="centerX" id="4TO-Aa-JHW"/>
-                            <constraint firstItem="I06-u1-E81" firstAttribute="centerY" secondItem="fZy-92-t4b" secondAttribute="centerY" id="hk8-Kl-34u"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XbP-tI-56W"/>
                     </view>
                 </viewController>

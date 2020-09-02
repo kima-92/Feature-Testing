@@ -40,8 +40,8 @@
 		FA879B8B250023D100E319DB = {
 			isa = PBXGroup;
 			children = (
-				FA879BAC250023F000E319DB /* View Controllers */,
 				FA879BAB250023DE00E319DB /* Storyboards */,
+				FA879BAC250023F000E319DB /* View Controllers */,
 				FA879B96250023D100E319DB /* Local Notification Testing */,
 				FA879B95250023D100E319DB /* Products */,
 			);

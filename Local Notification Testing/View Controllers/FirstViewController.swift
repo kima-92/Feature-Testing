@@ -9,11 +9,26 @@
 import UIKit
 
 class FirstViewController: UIViewController {
+    
+    // MARK: - ViewDidLoad
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        createButton()
+    }
+    
+    // MARK: - Methods
+    
+    private func createButton() {
+        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 200, height: 50))
+        button.backgroundColor = UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1)
+        button.setTitle("Get Notification", for: .normal)
+        button.addTarget(self, action: #selector(getNotification), for: .touchUpInside)
+        button.center = view.center
+        view.addSubview(button)
+    }
+    
+    @objc private func getNotification(sender: UIButton) {
     }
     
 
@@ -26,5 +41,4 @@ class FirstViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
