@@ -301,7 +301,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YQ69KMC87V;
+				DEVELOPMENT_TEAM = D8VQQ7D7K4;
 				INFOPLIST_FILE = "Local Notification Testing/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

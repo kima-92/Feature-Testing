@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class FirstViewController: UIViewController {
     
@@ -15,9 +16,17 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         createButton()
+        requestPermission()
     }
     
     // MARK: - Methods
+    
+    // Request Permission from the User to send Notifications from this App
+    private func requestPermission() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [[.alert, .sound, .badge]], completionHandler: {(granted, Error) in
+            print("There was an error requesting authorization")
+        })
+    }
     
     private func createButton() {
         let button = UIButton(frame: CGRect(x: 100, y: 100, width: 200, height: 50))
