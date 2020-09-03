@@ -37,7 +37,33 @@ class FirstViewController: UIViewController {
         view.addSubview(button)
     }
     
+    // Creating the Notification
     @objc private func getNotification(sender: UIButton) {
+        
+        // A Notification needs 3 things:
+        
+        // 1. Content
+        let content = UNMutableNotificationContent()
+        content.title = "Swift Reminder"
+        content.body = "Don't forget to brush up on your Swift Skills!"
+        content.badge = 1  // Counter of how many notifications this app has
+        
+        // 2. Trigger
+        // This sets the Trigger to show the notification after 10 seconds
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        
+        // 3. Request Notification
+        let requestIdentifier = UUID().uuidString
+        
+        // Setting up the Notification:
+        
+        // Create the Notification Request
+        let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
+        
+        // Add the Notification to the Notification Center
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: {(error) in
+            print("There was an error")
+        })
     }
     
 
