@@ -59,18 +59,37 @@ class FirstViewController: UIViewController {
         content.badge = counter
         
         // 2. Trigger
-        // This sets the Trigger to show the notification after 10 seconds
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
         
-        // 3. Request Notification
+        // a) This Trigger sets the Notification to show up after 10 seconds of pushing the button
+        let triggerByTimeIntvl = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        
+        // b) This Trigger sets the Notification to show up at a specified Time & Date
+        let dateString = "03/09/2020 12:45"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+        let dateFromString = dateFormatter.date(from: dateString)
+        
+        // Components of this Date
+        let componentsFromDate = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: dateFromString!)
+        // trigger
+        let triggerDate = UNCalendarNotificationTrigger(dateMatching: componentsFromDate, repeats: false)
+        
+        
+        // 3. Request Identifier
         let requestIdentifier = UUID().uuidString
         
-        // Setting up the Notification:
         
-        // Create the Notification Request
-        let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
+        // ** Creating the Notification Request
         
-        // Add the Notification to the Notification Center
+        // 1. Create the Notification Request
+        
+        //      a) With a Time Interval Trigger
+        //let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: triggerByTimeIntvl)
+        
+        //      b) With a Date Trigger
+        let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: triggerDate)
+        
+        // 2. Add the Notification Request to the Notification Center
         notificationCenter.add(request, withCompletionHandler: {(error) in
             print("There was an error")
         })
