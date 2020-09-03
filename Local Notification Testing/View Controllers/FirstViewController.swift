@@ -11,6 +11,11 @@ import UserNotifications
 
 class FirstViewController: UIViewController {
     
+    // MARK: - Properties
+    
+    var notificationCenter = UNUserNotificationCenter.current()
+    var notificationsCounter = 0
+    
     // MARK: - ViewDidLoad
 
     override func viewDidLoad() {
@@ -23,11 +28,12 @@ class FirstViewController: UIViewController {
     
     // Request Permission from the User to send Notifications from this App
     private func requestPermission() {
-        UNUserNotificationCenter.current().requestAuthorization(options: [[.alert, .sound, .badge]], completionHandler: {(granted, Error) in
+        notificationCenter.requestAuthorization(options: [[.alert, .sound, .badge]], completionHandler: {(granted, error) in
             print("There was an error requesting authorization")
         })
     }
     
+    // Button
     private func createButton() {
         let button = UIButton(frame: CGRect(x: 100, y: 100, width: 200, height: 50))
         button.backgroundColor = UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1)
@@ -46,7 +52,11 @@ class FirstViewController: UIViewController {
         let content = UNMutableNotificationContent()
         content.title = "Swift Reminder"
         content.body = "Don't forget to brush up on your Swift Skills!"
-        content.badge = 1  // Counter of how many notifications this app has
+        
+        // Counter of how many notifications this app has
+        notificationsCounter += 1
+        let counter = NSNumber(integerLiteral: notificationsCounter)
+        content.badge = counter
         
         // 2. Trigger
         // This sets the Trigger to show the notification after 10 seconds
@@ -61,19 +71,8 @@ class FirstViewController: UIViewController {
         let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
         
         // Add the Notification to the Notification Center
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: {(error) in
+        notificationCenter.add(request, withCompletionHandler: {(error) in
             print("There was an error")
         })
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
