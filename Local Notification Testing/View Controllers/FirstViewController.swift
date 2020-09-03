@@ -29,7 +29,12 @@ class FirstViewController: UIViewController {
     // Request Permission from the User to send Notifications from this App
     private func requestPermission() {
         notificationCenter.requestAuthorization(options: [[.alert, .sound, .badge]], completionHandler: {(granted, error) in
-            print("There was an error requesting authorization")
+            
+            // Grated is a Bool of whether or not the user gave you permission
+            
+            if let error = error {
+                print("There was an error requesting authorization: \(error)")
+            }
         })
     }
     
