@@ -28,7 +28,7 @@ class FirstViewController: UIViewController {
     
     // Request Permission from the User to send Notifications from this App
     private func requestPermission() {
-        notificationCenter.requestAuthorization(options: [[.alert, .sound, .badge]], completionHandler: {(granted, error) in
+        notificationCenter.requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {(granted, error) in
             
             // Grated is a Bool of whether or not the user gave you permission
             
@@ -58,6 +58,7 @@ class FirstViewController: UIViewController {
         let content = UNMutableNotificationContent()
         content.title = "Swift Reminder"
         content.body = "Don't forget to brush up on your Swift Skills!"
+        content.sound = .default // Remember to add a sound, or it won't have one at all!
         
         // Counter of how many notifications this app has
         notificationsCounter += 1
