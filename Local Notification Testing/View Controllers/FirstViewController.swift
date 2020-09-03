@@ -54,6 +54,7 @@ class FirstViewController: UIViewController {
         // A Notification needs 3 things:
         
         // 1. Content
+        
         let content = UNMutableNotificationContent()
         content.title = "Swift Reminder"
         content.body = "Don't forget to brush up on your Swift Skills!"
@@ -68,7 +69,7 @@ class FirstViewController: UIViewController {
         // a) This Trigger sets the Notification to show up after 10 seconds of pushing the button
         let triggerByTimeIntvl = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
         
-        // b) This Trigger sets the Notification to show up at a specified Time & Date
+        // c) This Trigger sets the Notification to show up at a specified Time & Date
         let dateString = "03/09/2020 12:45"
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
@@ -79,12 +80,19 @@ class FirstViewController: UIViewController {
         // trigger
         let triggerDate = UNCalendarNotificationTrigger(dateMatching: componentsFromDate, repeats: false)
         
+        // b) This Trigger ALSO sets the Notification to show up after 10 seconds, but using the UNCalendarNotificationTrigger intead of UNTimeIntervalNotificationTrigger
+        let dateByTimeIntvl = Date().addingTimeInterval(10)
+        
+        let dateComponentsByTimeIntvl = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: dateByTimeIntvl)
+        
+        let secondTriggerTimeIntvl = UNCalendarNotificationTrigger(dateMatching: dateComponentsByTimeIntvl, repeats: false)
         
         // 3. Request Identifier
+        
         let requestIdentifier = UUID().uuidString
         
         
-        // ** Creating the Notification Request
+        // MARK: - Notification Request :
         
         // 1. Create the Notification Request
         
