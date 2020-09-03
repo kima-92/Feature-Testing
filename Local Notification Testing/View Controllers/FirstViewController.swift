@@ -100,11 +100,17 @@ class FirstViewController: UIViewController {
         //let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: triggerByTimeIntvl)
         
         //      b) With a Date Trigger
-        let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: triggerDate)
+        //let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: triggerDate)
+        
+        //      c) With a Date Trigger, for a TimeInterval type Trigger
+        let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: secondTriggerTimeIntvl)
         
         // 2. Add the Notification Request to the Notification Center
-        notificationCenter.add(request, withCompletionHandler: {(error) in
-            print("There was an error")
-        })
+        notificationCenter.add(request) { (error) in
+            
+            if let error = error {
+                print("There was an error creating the Notification: \(error)")
+            }
+        }
     }
 }
