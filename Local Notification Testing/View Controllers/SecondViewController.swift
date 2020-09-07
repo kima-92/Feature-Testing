@@ -16,11 +16,14 @@ class SecondViewController: UIViewController {
     var notificationCenter = UNUserNotificationCenter.current()
     var notificationsCounter = 0
     var id = ""
+    var notificationsByIDs: [String] = []
     
     // MARK: - Outlets
 
     @IBOutlet weak var notification10secButton: UIButton!
     @IBOutlet weak var resetNotificationButton: UIButton!
+    
+    @IBOutlet weak var deleteNotificationsButton: UIButton!
     
     // MARK: - DidLoad
     override func viewDidLoad() {
@@ -34,6 +37,9 @@ class SecondViewController: UIViewController {
     }
     @IBAction func resetNotificationButtonTapped(_ sender: UIButton) {
         updateNotification()
+    }
+    @IBAction func deleteNotificationsButtonTapped(_ sender: UIButton) {
+        deleteNotifications()
     }
     
     // MARK: - Methods
@@ -61,6 +67,7 @@ class SecondViewController: UIViewController {
         // 3. Request ID
         
         let requestIdentifier = UUID().uuidString
+        notificationsByIDs.append(requestIdentifier)
         id = requestIdentifier
         
         // MARK: - Notification Request :
@@ -116,5 +123,37 @@ class SecondViewController: UIViewController {
             }
         }
         print("Updated the first notification")
+    }
+    
+    // Delete ALL pending Notifications from NotificationCenter
+    private func deleteNotifications() {
+        
+//        print("\nBefore\n")
+//        
+//        notificationCenter.getDeliveredNotifications { (deliveredNotifications) in
+//        print("\nFrom deliveredNotifications closure:\n")
+//        print(deliveredNotifications)
+//            
+//        }
+//        notificationCenter.getPendingNotificationRequests { (pendingNotifications) in
+//            print("\nFrom pendingNotifications closure:\n")
+//            print(pendingNotifications)
+//        }
+//        
+//        print("\nMy print: \(notificationsByIDs)\n")
+        
+        notificationCenter.removePendingNotificationRequests(withIdentifiers: notificationsByIDs)
+        
+//        print("\nAfter\n")
+//        
+//        notificationCenter.getDeliveredNotifications { (deliveredNotifications) in
+//        print("\nFrom deliveredNotifications closure:\n")
+//        print(deliveredNotifications)
+//            
+//        }
+//        notificationCenter.getPendingNotificationRequests { (pendingNotifications) in
+//            print("\nFrom pendingNotifications closure:\n")
+//            print(pendingNotifications)
+//        }
     }
 }
