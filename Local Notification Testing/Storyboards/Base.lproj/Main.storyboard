@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NcR-XT-l9n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1jS-kf-9u0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -17,10 +17,82 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="XbP-tI-56W"/>
                     </view>
+                    <navigationItem key="navigationItem" id="bQ7-OU-tA3">
+                        <barButtonItem key="rightBarButtonItem" title="Updating Notification" id="zSa-tK-T85">
+                            <connections>
+                                <segue destination="50x-G4-Nmu" kind="show" id="y5s-0o-JhR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4cA-Sf-cMW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="67" y="148"/>
+            <point key="canvasLocation" x="976.81159420289862" y="147.99107142857142"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="6iU-KV-QJJ">
+            <objects>
+                <viewController id="50x-G4-Nmu" customClass="SecondViewController" customModule="Local_Notification_Testing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jdw-I9-13P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="CCo-rG-zAx">
+                                <rect key="frame" x="39" y="368" width="336" height="160"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5V-Ln-sjm">
+                                        <rect key="frame" x="0.0" y="0.0" width="336" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="10 secs Notification"/>
+                                        <connections>
+                                            <action selector="notification10secButtonTapped:" destination="50x-G4-Nmu" eventType="touchUpInside" id="NXX-5m-Jag"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htq-vR-ctv">
+                                        <rect key="frame" x="0.0" y="100" width="336" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="Reset Notification"/>
+                                        <connections>
+                                            <action selector="resetNotificationButtonTapped:" destination="50x-G4-Nmu" eventType="touchUpInside" id="b1A-ry-QfY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CCo-rG-zAx" firstAttribute="centerY" secondItem="Jdw-I9-13P" secondAttribute="centerY" id="HoQ-UT-C7u"/>
+                            <constraint firstItem="CCo-rG-zAx" firstAttribute="centerX" secondItem="Jdw-I9-13P" secondAttribute="centerX" id="tBo-dP-b05"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2mD-nL-kFr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gZl-kf-xbe"/>
+                    <connections>
+                        <outlet property="notification10secButton" destination="p5V-Ln-sjm" id="asd-LP-9M1"/>
+                        <outlet property="resetNotificationButton" destination="htq-vR-ctv" id="qak-9C-81L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8QZ-ga-x8p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1811.594202898551" y="147.99107142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="y7x-n7-7hR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1jS-kf-9u0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4xt-xX-IQH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NcR-XT-l9n" kind="relationship" relationship="rootViewController" id="oPx-JA-9AB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coS-FD-beY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="66.666666666666671" y="147.99107142857142"/>
         </scene>
     </scenes>
 </document>
