@@ -38,7 +38,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="CCo-rG-zAx">
-                                <rect key="frame" x="39" y="318" width="336" height="260"/>
+                                <rect key="frame" x="39" y="300" width="336" height="296"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5V-Ln-sjm">
                                         <rect key="frame" x="0.0" y="0.0" width="336" height="60"/>
@@ -57,12 +57,19 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJH-J6-Fbd">
-                                        <rect key="frame" x="0.0" y="200" width="336" height="60"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="Delete Notifications"/>
+                                        <rect key="frame" x="0.0" y="200" width="336" height="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                        <state key="normal" title="Delete Pending Notifications"/>
                                         <connections>
-                                            <action selector="deleteNotificationsButtonTapped:" destination="50x-G4-Nmu" eventType="touchUpInside" id="g9b-de-2UB"/>
-                                            <action selector="resetNotificationButtonTapped:" destination="50x-G4-Nmu" eventType="touchUpInside" id="cOB-4r-zvS"/>
+                                            <action selector="deletePendingNotificationsButtonTapped:" destination="50x-G4-Nmu" eventType="touchUpInside" id="QHC-lx-pM9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QhT-Ei-zix">
+                                        <rect key="frame" x="0.0" y="254" width="336" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Delete Delivered Notifications"/>
+                                        <connections>
+                                            <action selector="deleteDeliveredNotificationsButtonTapped:" destination="50x-G4-Nmu" eventType="touchUpInside" id="hKf-5P-YKe"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -77,7 +84,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="gZl-kf-xbe"/>
                     <connections>
-                        <outlet property="deleteNotificationsButton" destination="jJH-J6-Fbd" id="QV4-yB-tXR"/>
+                        <outlet property="deleteDeliveredNotificationsButton" destination="QhT-Ei-zix" id="5Kh-Du-EQ1"/>
+                        <outlet property="deletePendingNotificationsButton" destination="jJH-J6-Fbd" id="YSC-Md-RqJ"/>
                         <outlet property="notification10secButton" destination="p5V-Ln-sjm" id="asd-LP-9M1"/>
                         <outlet property="resetNotificationButton" destination="htq-vR-ctv" id="qak-9C-81L"/>
                     </connections>
