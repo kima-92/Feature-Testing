@@ -82,7 +82,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2mD-nL-kFr"/>
                     </view>
-                    <navigationItem key="navigationItem" id="gZl-kf-xbe"/>
+                    <navigationItem key="navigationItem" id="gZl-kf-xbe">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="85B-hr-LMq">
+                            <connections>
+                                <segue destination="KQV-OR-z9c" kind="show" id="QaP-FU-eSi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="deleteDeliveredNotificationsButton" destination="QhT-Ei-zix" id="5Kh-Du-EQ1"/>
                         <outlet property="deletePendingNotificationsButton" destination="jJH-J6-Fbd" id="YSC-Md-RqJ"/>
@@ -93,6 +99,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8QZ-ga-x8p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1811.594202898551" y="147.99107142857142"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="S0I-Js-aat">
+            <objects>
+                <viewController id="KQV-OR-z9c" customClass="ThirdViewController" customModule="Local_Notification_Testing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rVt-7D-xuH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1L-Uy-YeQ">
+                                <rect key="frame" x="105.5" y="418" width="203" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Print Center"/>
+                                <connections>
+                                    <action selector="printCenterButtonTapped:" destination="KQV-OR-z9c" eventType="touchUpInside" id="YYy-7q-E5V"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Y1L-Uy-YeQ" firstAttribute="centerY" secondItem="rVt-7D-xuH" secondAttribute="centerY" id="Sh7-K0-JpH"/>
+                            <constraint firstItem="Y1L-Uy-YeQ" firstAttribute="centerX" secondItem="rVt-7D-xuH" secondAttribute="centerX" id="oz0-Wl-slg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yuE-B1-zFI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eJy-R6-U8Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EkD-OW-vdO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2755" y="148"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y7x-n7-7hR">
