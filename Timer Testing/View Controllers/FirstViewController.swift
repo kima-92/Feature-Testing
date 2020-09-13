@@ -13,16 +13,32 @@ class FirstViewController: UIViewController {
     // MARK: - Properties
     
     let countLabel = UILabel()
+    var timer: Timer!
     
     // MARK: - DidLoad
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configureLabel()
         view.backgroundColor = .random()
+        
+        // Setting up the Timer to fire off after 1 second,
+        // and repeat is true, so you NEED to invalidate at some point
+        // or it will go on forever somewhere in memory
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(changeBackground), userInfo: nil, repeats: true)
+        
+        // Invalidating the timer after 5 seconds
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            self.timer.invalidate()
+        }
     }
     
     // MARK: - Methods
+    
+    @objc private func changeBackground() {
+        view.backgroundColor = .random()
+    }
     
     private func configureLabel() {
         view.addSubview(countLabel)
