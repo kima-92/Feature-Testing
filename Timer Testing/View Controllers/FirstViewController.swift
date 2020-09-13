@@ -9,22 +9,33 @@
 import UIKit
 
 class FirstViewController: UIViewController {
+    
+    // MARK: - Properties
+    
+    let countLabel = UILabel()
+    
+    // MARK: - DidLoad
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configureLabel()
+        view.backgroundColor = .random()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Methods
+    
+    private func configureLabel() {
+        view.addSubview(countLabel)
+        
+        countLabel.font = UIFont.systemFont(ofSize: 100, weight: .bold)
+        countLabel.textAlignment = .center
+        countLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+        countLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        countLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+        countLabel.heightAnchor.constraint(equalToConstant: 300),
+        countLabel.widthAnchor.constraint(equalToConstant: 300)
+        ])
     }
-    */
-
 }
