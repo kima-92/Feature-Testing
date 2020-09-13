@@ -14,6 +14,7 @@ class FirstViewController: UIViewController {
     
     let countLabel = UILabel()
     var timer: Timer!
+    var counter = 0
     
     // MARK: - DidLoad
 
@@ -35,6 +36,11 @@ class FirstViewController: UIViewController {
     }
     
     // MARK: - Methods
+    
+    @objc private func incrementCounterLabel() {
+        counter += 1
+        countLabel.text = String(counter)
+    }
     
     @objc private func changeBackground() {
         view.backgroundColor = .random()
