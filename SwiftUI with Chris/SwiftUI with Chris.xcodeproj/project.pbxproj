@@ -10,6 +10,7 @@
 		FA776ABA253A0A9500ACA4DD /* ZStackTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA776AB9253A0A9500ACA4DD /* ZStackTesting.swift */; };
 		FA776ABD253A0C8E00ACA4DD /* LemonGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA776ABC253A0C8E00ACA4DD /* LemonGrid.swift */; };
 		FA776AC0253A0E2D00ACA4DD /* ModifiersContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA776ABF253A0E2D00ACA4DD /* ModifiersContentView.swift */; };
+		FA776AC3253A14C900ACA4DD /* FoodPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA776AC2253A14C900ACA4DD /* FoodPageContentView.swift */; };
 		FAEFF60F2539FAF900D7F940 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEFF60E2539FAF900D7F940 /* AppDelegate.swift */; };
 		FAEFF6112539FAF900D7F940 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEFF6102539FAF900D7F940 /* SceneDelegate.swift */; };
 		FAEFF6132539FAF900D7F940 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEFF6122539FAF900D7F940 /* ContentView.swift */; };
@@ -22,6 +23,7 @@
 		FA776AB9253A0A9500ACA4DD /* ZStackTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackTesting.swift; sourceTree = "<group>"; };
 		FA776ABC253A0C8E00ACA4DD /* LemonGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemonGrid.swift; sourceTree = "<group>"; };
 		FA776ABF253A0E2D00ACA4DD /* ModifiersContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiersContentView.swift; sourceTree = "<group>"; };
+		FA776AC2253A14C900ACA4DD /* FoodPageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPageContentView.swift; sourceTree = "<group>"; };
 		FAEFF60B2539FAF900D7F940 /* SwiftUI with Chris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI with Chris.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEFF60E2539FAF900D7F940 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAEFF6102539FAF900D7F940 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				FA776AB9253A0A9500ACA4DD /* ZStackTesting.swift */,
 				FA776ABC253A0C8E00ACA4DD /* LemonGrid.swift */,
 				FA776ABF253A0E2D00ACA4DD /* ModifiersContentView.swift */,
+				FA776AC2253A14C900ACA4DD /* FoodPageContentView.swift */,
 			);
 			path = "Content Views";
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				FA776ABA253A0A9500ACA4DD /* ZStackTesting.swift in Sources */,
 				FAEFF60F2539FAF900D7F940 /* AppDelegate.swift in Sources */,
 				FAEFF6112539FAF900D7F940 /* SceneDelegate.swift in Sources */,
+				FA776AC3253A14C900ACA4DD /* FoodPageContentView.swift in Sources */,
 				FAEFF6132539FAF900D7F940 /* ContentView.swift in Sources */,
 				FA776ABD253A0C8E00ACA4DD /* LemonGrid.swift in Sources */,
 				FA776AC0253A0E2D00ACA4DD /* ModifiersContentView.swift in Sources */,
