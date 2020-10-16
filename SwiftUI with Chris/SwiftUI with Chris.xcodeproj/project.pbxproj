@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA776ABA253A0A9500ACA4DD /* ZStackTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA776AB9253A0A9500ACA4DD /* ZStackTesting.swift */; };
 		FAEFF60F2539FAF900D7F940 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEFF60E2539FAF900D7F940 /* AppDelegate.swift */; };
 		FAEFF6112539FAF900D7F940 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEFF6102539FAF900D7F940 /* SceneDelegate.swift */; };
 		FAEFF6132539FAF900D7F940 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEFF6122539FAF900D7F940 /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA776AB9253A0A9500ACA4DD /* ZStackTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackTesting.swift; sourceTree = "<group>"; };
 		FAEFF60B2539FAF900D7F940 /* SwiftUI with Chris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI with Chris.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEFF60E2539FAF900D7F940 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAEFF6102539FAF900D7F940 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				FAEFF6122539FAF900D7F940 /* ContentView.swift */,
+				FA776AB9253A0A9500ACA4DD /* ZStackTesting.swift */,
 			);
 			path = "Content Views";
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA776ABA253A0A9500ACA4DD /* ZStackTesting.swift in Sources */,
 				FAEFF60F2539FAF900D7F940 /* AppDelegate.swift in Sources */,
 				FAEFF6112539FAF900D7F940 /* SceneDelegate.swift in Sources */,
 				FAEFF6132539FAF900D7F940 /* ContentView.swift in Sources */,
