@@ -40,6 +40,8 @@
 		FA776AEA253A610800ACA4DD = {
 			isa = PBXGroup;
 			children = (
+				FA776B0B253A632800ACA4DD /* Content Views */,
+				FA776B0C253A633700ACA4DD /* Views */,
 				FA776AF5253A610800ACA4DD /* Color Picker */,
 				FA776AF4253A610800ACA4DD /* Products */,
 			);
@@ -58,7 +60,6 @@
 			children = (
 				FA776AF6253A610800ACA4DD /* AppDelegate.swift */,
 				FA776AF8253A610800ACA4DD /* SceneDelegate.swift */,
-				FA776AFA253A610800ACA4DD /* ContentView.swift */,
 				FA776AFC253A610B00ACA4DD /* Assets.xcassets */,
 				FA776B01253A610B00ACA4DD /* LaunchScreen.storyboard */,
 				FA776B04253A610B00ACA4DD /* Info.plist */,
@@ -73,6 +74,21 @@
 				FA776AFF253A610B00ACA4DD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FA776B0B253A632800ACA4DD /* Content Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA776AFA253A610800ACA4DD /* ContentView.swift */,
+			);
+			path = "Content Views";
+			sourceTree = "<group>";
+		};
+		FA776B0C253A633700ACA4DD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
