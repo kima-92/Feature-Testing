@@ -37,9 +37,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA41F8D4253B2CBF00E31DC1 /* Content Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA776AD8253A385A00ACA4DD /* ContentView.swift */,
+			);
+			path = "Content Views";
+			sourceTree = "<group>";
+		};
+		FA41F8D5253B2CCA00E31DC1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FA776AC8253A385A00ACA4DD = {
 			isa = PBXGroup;
 			children = (
+				FA41F8D4253B2CBF00E31DC1 /* Content Views */,
+				FA41F8D5253B2CCA00E31DC1 /* Views */,
 				FA776AD3253A385A00ACA4DD /* Slots Demo */,
 				FA776AD2253A385A00ACA4DD /* Products */,
 			);
@@ -58,7 +75,6 @@
 			children = (
 				FA776AD4253A385A00ACA4DD /* AppDelegate.swift */,
 				FA776AD6253A385A00ACA4DD /* SceneDelegate.swift */,
-				FA776AD8253A385A00ACA4DD /* ContentView.swift */,
 				FA776ADA253A385C00ACA4DD /* Assets.xcassets */,
 				FA776ADF253A385C00ACA4DD /* LaunchScreen.storyboard */,
 				FA776AE2253A385C00ACA4DD /* Info.plist */,
@@ -109,7 +125,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FA776ACC253A385A00ACA4DD /* Build configuration list for PBXProject "Slots Demo" */;
+			buildConfigurationList = FA776ACC253A385A00ACA4DD /* Build configuration list for PBXProject "git status" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -326,7 +342,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FA776ACC253A385A00ACA4DD /* Build configuration list for PBXProject "Slots Demo" */ = {
+		FA776ACC253A385A00ACA4DD /* Build configuration list for PBXProject "git status" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA776AE3253A385C00ACA4DD /* Debug */,
