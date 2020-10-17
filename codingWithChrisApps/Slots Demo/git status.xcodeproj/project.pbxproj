@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA41F8D8253B2D5600E31DC1 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41F8D7253B2D5600E31DC1 /* CardView.swift */; };
 		FA776AD5253A385A00ACA4DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA776AD4253A385A00ACA4DD /* AppDelegate.swift */; };
 		FA776AD7253A385A00ACA4DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA776AD6253A385A00ACA4DD /* SceneDelegate.swift */; };
 		FA776AD9253A385A00ACA4DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA776AD8253A385A00ACA4DD /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA41F8D7253B2D5600E31DC1 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		FA776AD1253A385A00ACA4DD /* Slots Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Slots Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA776AD4253A385A00ACA4DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA776AD6253A385A00ACA4DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 		FA41F8D5253B2CCA00E31DC1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FA41F8D7253B2D5600E31DC1 /* CardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			files = (
 				FA776AD5253A385A00ACA4DD /* AppDelegate.swift in Sources */,
 				FA776AD7253A385A00ACA4DD /* SceneDelegate.swift in Sources */,
+				FA41F8D8253B2D5600E31DC1 /* CardView.swift in Sources */,
 				FA776AD9253A385A00ACA4DD /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
