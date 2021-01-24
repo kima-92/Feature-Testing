@@ -7,29 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA6E9A03253CCC5400E6EDEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E9A02253CCC5400E6EDEB /* AppDelegate.swift */; };
-		FA6E9A05253CCC5400E6EDEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E9A04253CCC5400E6EDEB /* SceneDelegate.swift */; };
-		FA6E9A07253CCC5400E6EDEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E9A06253CCC5400E6EDEB /* ContentView.swift */; };
-		FA6E9A09253CCC5700E6EDEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6E9A08253CCC5700E6EDEB /* Assets.xcassets */; };
-		FA6E9A0C253CCC5700E6EDEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6E9A0B253CCC5700E6EDEB /* Preview Assets.xcassets */; };
-		FA6E9A0F253CCC5700E6EDEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6E9A0D253CCC5700E6EDEB /* LaunchScreen.storyboard */; };
-		FAE51A66253CD12800589A11 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE51A65253CD12800589A11 /* ResultView.swift */; };
+		FAFF80D525BD2CD20013E2AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF80D425BD2CD20013E2AA /* AppDelegate.swift */; };
+		FAFF80D725BD2CD20013E2AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF80D625BD2CD20013E2AA /* SceneDelegate.swift */; };
+		FAFF80DC25BD2CD20013E2AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFF80DA25BD2CD20013E2AA /* Main.storyboard */; };
+		FAFF80DE25BD2CD50013E2AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFF80DD25BD2CD50013E2AA /* Assets.xcassets */; };
+		FAFF80E125BD2CD50013E2AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFF80DF25BD2CD50013E2AA /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FA6E99FF253CCC5400E6EDEB /* NavigationView in SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NavigationView in SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA6E9A02253CCC5400E6EDEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA6E9A04253CCC5400E6EDEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA6E9A06253CCC5400E6EDEB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		FA6E9A08253CCC5700E6EDEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FA6E9A0B253CCC5700E6EDEB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FA6E9A0E253CCC5700E6EDEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FA6E9A10253CCC5700E6EDEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAE51A65253CD12800589A11 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		FAFF80D125BD2CD20013E2AA /* TableView Testing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TableView Testing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAFF80D425BD2CD20013E2AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAFF80D625BD2CD20013E2AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FAFF80DB25BD2CD20013E2AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAFF80DD25BD2CD50013E2AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAFF80E025BD2CD50013E2AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAFF80E225BD2CD50013E2AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FA6E99FC253CCC5400E6EDEB /* Frameworks */ = {
+		FAFF80CE25BD2CD20013E2AA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,96 +35,86 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FA6E99F6253CCC5400E6EDEB = {
+		FAFF80C825BD2CD20013E2AA = {
 			isa = PBXGroup;
 			children = (
-				FA6E9A17253CCC6E00E6EDEB /* Content Views */,
-				FA6E9A18253CCC8100E6EDEB /* Views */,
-				FA6E9A01253CCC5400E6EDEB /* NavigationView in SwiftUI */,
-				FA6E9A00253CCC5400E6EDEB /* Products */,
+				FAFF80EB25BD2CEA0013E2AA /* Storyboards */,
+				FAFF80E925BD2CDA0013E2AA /* View Controllers */,
+				FAFF80D325BD2CD20013E2AA /* TableView Testing */,
+				FAFF80D225BD2CD20013E2AA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FA6E9A00253CCC5400E6EDEB /* Products */ = {
+		FAFF80D225BD2CD20013E2AA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA6E99FF253CCC5400E6EDEB /* NavigationView in SwiftUI.app */,
+				FAFF80D125BD2CD20013E2AA /* TableView Testing.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FA6E9A01253CCC5400E6EDEB /* NavigationView in SwiftUI */ = {
+		FAFF80D325BD2CD20013E2AA /* TableView Testing */ = {
 			isa = PBXGroup;
 			children = (
-				FA6E9A02253CCC5400E6EDEB /* AppDelegate.swift */,
-				FA6E9A04253CCC5400E6EDEB /* SceneDelegate.swift */,
-				FA6E9A08253CCC5700E6EDEB /* Assets.xcassets */,
-				FA6E9A0D253CCC5700E6EDEB /* LaunchScreen.storyboard */,
-				FA6E9A10253CCC5700E6EDEB /* Info.plist */,
-				FA6E9A0A253CCC5700E6EDEB /* Preview Content */,
+				FAFF80D425BD2CD20013E2AA /* AppDelegate.swift */,
+				FAFF80D625BD2CD20013E2AA /* SceneDelegate.swift */,
+				FAFF80DD25BD2CD50013E2AA /* Assets.xcassets */,
+				FAFF80E225BD2CD50013E2AA /* Info.plist */,
 			);
-			path = "NavigationView in SwiftUI";
+			path = "TableView Testing";
 			sourceTree = "<group>";
 		};
-		FA6E9A0A253CCC5700E6EDEB /* Preview Content */ = {
+		FAFF80E925BD2CDA0013E2AA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FA6E9A0B253CCC5700E6EDEB /* Preview Assets.xcassets */,
 			);
-			path = "Preview Content";
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		FA6E9A17253CCC6E00E6EDEB /* Content Views */ = {
+		FAFF80EB25BD2CEA0013E2AA /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				FA6E9A06253CCC5400E6EDEB /* ContentView.swift */,
-				FAE51A65253CD12800589A11 /* ResultView.swift */,
+				FAFF80DA25BD2CD20013E2AA /* Main.storyboard */,
+				FAFF80DF25BD2CD50013E2AA /* LaunchScreen.storyboard */,
 			);
-			path = "Content Views";
-			sourceTree = "<group>";
-		};
-		FA6E9A18253CCC8100E6EDEB /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FA6E99FE253CCC5400E6EDEB /* NavigationView in SwiftUI */ = {
+		FAFF80D025BD2CD20013E2AA /* TableView Testing */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA6E9A13253CCC5700E6EDEB /* Build configuration list for PBXNativeTarget "NavigationView in SwiftUI" */;
+			buildConfigurationList = FAFF80E525BD2CD50013E2AA /* Build configuration list for PBXNativeTarget "TableView Testing" */;
 			buildPhases = (
-				FA6E99FB253CCC5400E6EDEB /* Sources */,
-				FA6E99FC253CCC5400E6EDEB /* Frameworks */,
-				FA6E99FD253CCC5400E6EDEB /* Resources */,
+				FAFF80CD25BD2CD20013E2AA /* Sources */,
+				FAFF80CE25BD2CD20013E2AA /* Frameworks */,
+				FAFF80CF25BD2CD20013E2AA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "NavigationView in SwiftUI";
-			productName = "NavigationView in SwiftUI";
-			productReference = FA6E99FF253CCC5400E6EDEB /* NavigationView in SwiftUI.app */;
+			name = "TableView Testing";
+			productName = "TableView Testing";
+			productReference = FAFF80D125BD2CD20013E2AA /* TableView Testing.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FA6E99F7253CCC5400E6EDEB /* Project object */ = {
+		FAFF80C925BD2CD20013E2AA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
 				TargetAttributes = {
-					FA6E99FE253CCC5400E6EDEB = {
-						CreatedOnToolsVersion = 12.0.1;
+					FAFF80D025BD2CD20013E2AA = {
+						CreatedOnToolsVersion = 12.3;
 					};
 				};
 			};
-			buildConfigurationList = FA6E99FA253CCC5400E6EDEB /* Build configuration list for PBXProject "NavigationView in SwiftUI" */;
+			buildConfigurationList = FAFF80CC25BD2CD20013E2AA /* Build configuration list for PBXProject "TableView Testing" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -136,48 +122,54 @@
 				en,
 				Base,
 			);
-			mainGroup = FA6E99F6253CCC5400E6EDEB;
-			productRefGroup = FA6E9A00253CCC5400E6EDEB /* Products */;
+			mainGroup = FAFF80C825BD2CD20013E2AA;
+			productRefGroup = FAFF80D225BD2CD20013E2AA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FA6E99FE253CCC5400E6EDEB /* NavigationView in SwiftUI */,
+				FAFF80D025BD2CD20013E2AA /* TableView Testing */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FA6E99FD253CCC5400E6EDEB /* Resources */ = {
+		FAFF80CF25BD2CD20013E2AA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA6E9A0F253CCC5700E6EDEB /* LaunchScreen.storyboard in Resources */,
-				FA6E9A0C253CCC5700E6EDEB /* Preview Assets.xcassets in Resources */,
-				FA6E9A09253CCC5700E6EDEB /* Assets.xcassets in Resources */,
+				FAFF80E125BD2CD50013E2AA /* LaunchScreen.storyboard in Resources */,
+				FAFF80DE25BD2CD50013E2AA /* Assets.xcassets in Resources */,
+				FAFF80DC25BD2CD20013E2AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FA6E99FB253CCC5400E6EDEB /* Sources */ = {
+		FAFF80CD25BD2CD20013E2AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA6E9A03253CCC5400E6EDEB /* AppDelegate.swift in Sources */,
-				FAE51A66253CD12800589A11 /* ResultView.swift in Sources */,
-				FA6E9A05253CCC5400E6EDEB /* SceneDelegate.swift in Sources */,
-				FA6E9A07253CCC5400E6EDEB /* ContentView.swift in Sources */,
+				FAFF80D525BD2CD20013E2AA /* AppDelegate.swift in Sources */,
+				FAFF80D725BD2CD20013E2AA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FA6E9A0D253CCC5700E6EDEB /* LaunchScreen.storyboard */ = {
+		FAFF80DA25BD2CD20013E2AA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FA6E9A0E253CCC5700E6EDEB /* Base */,
+				FAFF80DB25BD2CD20013E2AA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FAFF80DF25BD2CD50013E2AA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAFF80E025BD2CD50013E2AA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -185,7 +177,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		FA6E9A11253CCC5700E6EDEB /* Debug */ = {
+		FAFF80E325BD2CD50013E2AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -236,7 +228,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -246,7 +238,7 @@
 			};
 			name = Debug;
 		};
-		FA6E9A12253CCC5700E6EDEB /* Release */ = {
+		FAFF80E425BD2CD50013E2AA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -291,7 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -301,42 +293,38 @@
 			};
 			name = Release;
 		};
-		FA6E9A14253CCC5700E6EDEB /* Debug */ = {
+		FAFF80E625BD2CD50013E2AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"NavigationView in SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = YQ69KMC87V;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "NavigationView in SwiftUI/Info.plist";
+				INFOPLIST_FILE = "TableView Testing/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wilmarodriguez.NavigationView-in-SwiftUI";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wilmarodriguez.TableView-Testing";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		FA6E9A15253CCC5700E6EDEB /* Release */ = {
+		FAFF80E725BD2CD50013E2AA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"NavigationView in SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = YQ69KMC87V;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "NavigationView in SwiftUI/Info.plist";
+				INFOPLIST_FILE = "TableView Testing/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wilmarodriguez.NavigationView-in-SwiftUI";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wilmarodriguez.TableView-Testing";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -346,25 +334,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FA6E99FA253CCC5400E6EDEB /* Build configuration list for PBXProject "NavigationView in SwiftUI" */ = {
+		FAFF80CC25BD2CD20013E2AA /* Build configuration list for PBXProject "TableView Testing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FA6E9A11253CCC5700E6EDEB /* Debug */,
-				FA6E9A12253CCC5700E6EDEB /* Release */,
+				FAFF80E325BD2CD50013E2AA /* Debug */,
+				FAFF80E425BD2CD50013E2AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA6E9A13253CCC5700E6EDEB /* Build configuration list for PBXNativeTarget "NavigationView in SwiftUI" */ = {
+		FAFF80E525BD2CD50013E2AA /* Build configuration list for PBXNativeTarget "TableView Testing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FA6E9A14253CCC5700E6EDEB /* Debug */,
-				FA6E9A15253CCC5700E6EDEB /* Release */,
+				FAFF80E625BD2CD50013E2AA /* Debug */,
+				FAFF80E725BD2CD50013E2AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FA6E99F7253CCC5400E6EDEB /* Project object */;
+	rootObject = FAFF80C925BD2CD20013E2AA /* Project object */;
 }
